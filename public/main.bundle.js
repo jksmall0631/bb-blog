@@ -26102,7 +26102,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  margin: 50px 0 50px 0;\n}\n\nol, ul {\n  padding-left: none;\n  text-align: center;\n}\n\nli {\n  display: inline-block;\n}\n\n.nav {\n  color: lightgrey;\n  text-decoration: none;\n  font-weight: 100;\n  margin: 0 20px;\n  font-size: 15px;\n  transition: all .5s ease-in;\n}\n\n.nav:hover {\n  letter-spacing: 1px;\n  font-size: 16px;\n}\n", ""]);
+	exports.push([module.id, "nav {\n  margin: 50px 0 50px 0;\n}\n\nol, ul {\n  padding-left: none;\n  text-align: center;\n}\n\nli {\n  display: inline-block;\n}\n\n.nav {\n  color: black;\n  text-decoration: none;\n  font-weight: 300;\n  margin: 0 20px;\n  font-size: 15px;\n  transition: all .5s ease-in;\n}\n\n.nav:hover {\n  letter-spacing: 1px;\n  font-size: 16px;\n}\n", ""]);
 
 	// exports
 
@@ -26718,22 +26718,18 @@
 	    { className: "banner" },
 	    _react2.default.createElement(
 	      "div",
-	      { className: "name-cont" },
-	      _react2.default.createElement(
-	        "h1",
-	        { className: "name" },
-	        "SHARON"
-	      ),
-	      _react2.default.createElement(
-	        "h1",
-	        { className: "name" },
-	        "CLEERE"
-	      )
+	      { className: "logo-cont" },
+	      _react2.default.createElement("img", { className: "logo", src: "../../resources/buddha-babies.png", alt: "Buddha Babies Logo" })
+	    ),
+	    _react2.default.createElement(
+	      "h1",
+	      { className: "title" },
+	      "Buddha Babies Books"
 	    ),
 	    _react2.default.createElement(
 	      "h2",
 	      { className: "motto" },
-	      "CREATIVE IMAGERY THROUGH WORDS AND PHOTOS"
+	      "CHILDREN'S BOOKS THAT FACILITATE AN UNDERSTANDING OF MEDITATION, YOGA, AND PHILOSOPHY"
 	    )
 	  );
 	};
@@ -26780,7 +26776,7 @@
 
 
 	// module
-	exports.push([module.id, ".banner {\n  width: 90%;\n  height: 500px;\n  text-align: center;\n  margin: auto;\n}\n\n.name-cont {\n  margin: 100px 0 50px 0;\n}\n\n.name {\n  color: lightgrey;\n  font-weight: 100;\n  font-size: 180px;\n  letter-spacing: 20px;\n  margin-right: -20px;\n}\n\n.motto {\n  color: #DEBA80;\n  font-weight: 100;\n  font-size: 23px;\n  letter-spacing: 5px;\n  word-spacing: 10px;\n}\n\n@media (max-width: 950px) {\n  .name {\n    font-size: 100px;\n  }\n}\n\n@media (max-width: 580px) {\n  .name {\n    font-size: 45px;\n  }\n  .motto {\n    font-size: 18px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".banner {\n  width: 90%;\n  height: 500px;\n  text-align: center;\n  margin: auto;\n}\n\n.logo {\n  max-width: 450px;\n}\n\n.title {\n  color: black;\n  font-weight: 300;\n  font-size: 40px;\n  letter-spacing: 5px;\n  word-spacing: 10px;\n}\n\n.motto {\n  color: black;\n  font-weight: 300;\n  font-size: 23px;\n  letter-spacing: 5px;\n  word-spacing: 10px;\n}\n\n@media (max-width: 950px) {\n  .name {\n    font-size: 100px;\n  }\n}\n\n@media (max-width: 580px) {\n  .name {\n    font-size: 45px;\n  }\n  .motto {\n    font-size: 18px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -28050,7 +28046,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: black;\n  font-family: 'Lato', sans-serif;\n  color: white;\n}\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #f1cf72;\n  font-family: 'Lato', sans-serif;\n  color: white;\n}\n", ""]);
 
 	// exports
 

@@ -10,8 +10,7 @@ import Nav from "../Nav/Nav";
 import Welcome from "../Welcome/Welcome";
 import About from "../About/About";
 import Blog from "../Blog/Blog";
-import Write from "../Write/Write";
-import Photo from "../Photo/Photo";
+import Books from "../Books/Books";
 import AdminLogin from "../AdminLogin/AdminLogin";
 import Protected from "../Protected/Protected";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -23,18 +22,14 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      entries: [],
-      photos: []
+      entries: []
     };
     this.addEntry = this.addEntry.bind(this);
     this.removeEntry = this.removeEntry.bind(this);
-    this.savePhoto = this.savePhoto.bind(this);
-    this.removePhoto = this.removePhoto.bind(this);
   }
 
   componentDidMount() {
     this.blogEntries();
-    this.photos();
   }
 
   blogEntries() {
@@ -89,58 +84,6 @@ export default class App extends Component {
       .catch(err => alert(err));
   }
 
-  photos() {
-    const url = "https://secleere.herokuapp.com/api/v1/photos";
-    fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      }
-    })
-      .then(data => data.json())
-      .then(data => {
-        this.setState({ photos: data });
-      })
-      .catch(err => alert(err));
-  }
-
-  savePhoto(photo) {
-    const url = "https://secleere.herokuapp.com/api/v1/photos";
-    fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ photo })
-    })
-      .then(data => data.json())
-      .then(data => {
-        let photoArray = this.state.photos;
-        photoArray.push(data[0]);
-        this.setState({ photos: photoArray });
-      })
-      .catch(err => alert(err));
-  }
-
-  removePhoto(id) {
-    const url = "https://secleere.herokuapp.com/api/v1/photos";
-    fetch(url, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id })
-    })
-      .then(data => data.json())
-      .then(data => {
-        let array = this.state ? this.state.photos : [];
-        for (let i = 0; i < array.length; i++) {
-          if (array[i].id === id) {
-            array.splice(i, 1);
-          }
-        }
-        this.setState({ photos: array });
-      })
-      .catch(err => alert(err));
-  }
-
   render() {
     return (
       <main>
@@ -152,10 +95,9 @@ export default class App extends Component {
           render={() =>
             <Blog entries={this.state.entries} component={Blog} />}
         />
-        <Route path="/write" component={Write} />
         <Route
-          path="/photo"
-          render={() => <Photo photos={this.state.photos} component={Photo} />}
+          path="/books"
+          render={() => <Books component={Books} />}
         />
         <Route exact path="/admin" component={AdminLogin} />
         <PrivateRoute
@@ -163,9 +105,6 @@ export default class App extends Component {
           entries={this.state.entries}
           addEntry={this.addEntry}
           removeEntry={this.removeEntry}
-          photos={this.state.photos}
-          savePhoto={this.savePhoto}
-          removePhoto={this.removePhoto}
           component={Protected}
         />
       </main>

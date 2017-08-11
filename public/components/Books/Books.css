@@ -1,32 +1,32 @@
-.photo-cont {
+.book-cont {
   max-width: 800px;
   margin: 50px auto 125px;
 }
 
-.photo {
+.book {
   max-width: 800px;
 }
 
-.photo-del {
+.book-del {
   float: right;
 }
 
 @media (max-width: 800px) {
-  .photo-cont {
+  .book-cont {
     margin: 50px auto;
   }
 
-  .photo, .photo-cont {
+  .book, .book-cont {
     max-width: 500px;
   }
 }
 
 @media (max-width: 500px) {
-  .photo-cont {
+  .book-cont {
     margin: 50px auto;
   }
 
-  .photo, .photo-cont {
+  .book, .book-cont {
     max-width: 100%
   }
 }

@@ -25725,27 +25725,23 @@
 
 	var _About2 = _interopRequireDefault(_About);
 
-	var _Travel = __webpack_require__(237);
+	var _Blog = __webpack_require__(237);
 
-	var _Travel2 = _interopRequireDefault(_Travel);
+	var _Blog2 = _interopRequireDefault(_Blog);
 
-	var _Write = __webpack_require__(240);
+	var _Books = __webpack_require__(240);
 
-	var _Write2 = _interopRequireDefault(_Write);
+	var _Books2 = _interopRequireDefault(_Books);
 
-	var _Photo = __webpack_require__(241);
-
-	var _Photo2 = _interopRequireDefault(_Photo);
-
-	var _AdminLogin = __webpack_require__(244);
+	var _AdminLogin = __webpack_require__(243);
 
 	var _AdminLogin2 = _interopRequireDefault(_AdminLogin);
 
-	var _Protected = __webpack_require__(248);
+	var _Protected = __webpack_require__(247);
 
 	var _Protected2 = _interopRequireDefault(_Protected);
 
-	var _PrivateRoute = __webpack_require__(257);
+	var _PrivateRoute = __webpack_require__(255);
 
 	var _PrivateRoute2 = _interopRequireDefault(_PrivateRoute);
 
@@ -25757,8 +25753,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	__webpack_require__(256);
 	__webpack_require__(258);
-	__webpack_require__(260);
 
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -25769,13 +25765,10 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
 	    _this.state = {
-	      entries: [],
-	      photos: []
+	      entries: []
 	    };
 	    _this.addEntry = _this.addEntry.bind(_this);
 	    _this.removeEntry = _this.removeEntry.bind(_this);
-	    _this.savePhoto = _this.savePhoto.bind(_this);
-	    _this.removePhoto = _this.removePhoto.bind(_this);
 	    return _this;
 	  }
 
@@ -25783,7 +25776,6 @@
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
 	      this.blogEntries();
-	      this.photos();
 	    }
 	  }, {
 	    key: "blogEntries",
@@ -25850,73 +25842,9 @@
 	      });
 	    }
 	  }, {
-	    key: "photos",
-	    value: function photos() {
-	      var _this5 = this;
-
-	      var url = "https://secleere.herokuapp.com/api/v1/photos";
-	      fetch(url, {
-	        method: "GET",
-	        headers: {
-	          "Content-Type": "application/json",
-	          Accept: "application/json"
-	        }
-	      }).then(function (data) {
-	        return data.json();
-	      }).then(function (data) {
-	        _this5.setState({ photos: data });
-	      }).catch(function (err) {
-	        return alert(err);
-	      });
-	    }
-	  }, {
-	    key: "savePhoto",
-	    value: function savePhoto(photo) {
-	      var _this6 = this;
-
-	      var url = "https://secleere.herokuapp.com/api/v1/photos";
-	      fetch(url, {
-	        method: "POST",
-	        headers: { "Content-Type": "application/json" },
-	        body: JSON.stringify({ photo: photo })
-	      }).then(function (data) {
-	        return data.json();
-	      }).then(function (data) {
-	        var photoArray = _this6.state.photos;
-	        photoArray.push(data[0]);
-	        _this6.setState({ photos: photoArray });
-	      }).catch(function (err) {
-	        return alert(err);
-	      });
-	    }
-	  }, {
-	    key: "removePhoto",
-	    value: function removePhoto(id) {
-	      var _this7 = this;
-
-	      var url = "https://secleere.herokuapp.com/api/v1/photos";
-	      fetch(url, {
-	        method: "DELETE",
-	        headers: { "Content-Type": "application/json" },
-	        body: JSON.stringify({ id: id })
-	      }).then(function (data) {
-	        return data.json();
-	      }).then(function (data) {
-	        var array = _this7.state ? _this7.state.photos : [];
-	        for (var i = 0; i < array.length; i++) {
-	          if (array[i].id === id) {
-	            array.splice(i, 1);
-	          }
-	        }
-	        _this7.setState({ photos: array });
-	      }).catch(function (err) {
-	        return alert(err);
-	      });
-	    }
-	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _this8 = this;
+	      var _this5 = this;
 
 	      return _react2.default.createElement(
 	        "main",
@@ -25925,16 +25853,15 @@
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _Welcome2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: "/about", component: _About2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, {
-	          path: "/travel",
+	          path: "/blog",
 	          render: function render() {
-	            return _react2.default.createElement(_Travel2.default, { entries: _this8.state.entries, component: _Travel2.default });
+	            return _react2.default.createElement(_Blog2.default, { entries: _this5.state.entries, component: _Blog2.default });
 	          }
 	        }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: "/write", component: _Write2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, {
-	          path: "/photo",
+	          path: "/books",
 	          render: function render() {
-	            return _react2.default.createElement(_Photo2.default, { photos: _this8.state.photos, component: _Photo2.default });
+	            return _react2.default.createElement(_Books2.default, { component: _Books2.default });
 	          }
 	        }),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/admin", component: _AdminLogin2.default }),
@@ -25943,9 +25870,6 @@
 	          entries: this.state.entries,
 	          addEntry: this.addEntry,
 	          removeEntry: this.removeEntry,
-	          photos: this.state.photos,
-	          savePhoto: this.savePhoto,
-	          removePhoto: this.removePhoto,
 	          component: _Protected2.default
 	        })
 	      );
@@ -26026,21 +25950,8 @@
 	            null,
 	            _react2.default.createElement(
 	              _reactRouterDom.Link,
-	              { className: "nav", to: "/travel" },
-	              ". \xA0\xA0 TRAVEL \xA0\xA0 ."
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "li",
-	            null,
-	            _react2.default.createElement(
-	              "a",
-	              {
-	                className: "nav",
-	                href: "https://theprose.com/clearly",
-	                target: "_blank"
-	              },
-	              ". \xA0\xA0 WRITE \xA0\xA0 ."
+	              { className: "nav", to: "/blog" },
+	              ". \xA0\xA0 BLOG \xA0\xA0 ."
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -26048,8 +25959,8 @@
 	            null,
 	            _react2.default.createElement(
 	              _reactRouterDom.Link,
-	              { className: "nav", to: "/photo" },
-	              ". \xA0\xA0 PHOTOGRAPH \xA0\xA0 ."
+	              { className: "nav", to: "/books" },
+	              ". \xA0\xA0 BOOKS \xA0\xA0 ."
 	            )
 	          )
 	        )
@@ -26860,16 +26771,16 @@
 
 	__webpack_require__(238);
 
-	var Travel = function (_Component) {
-	  _inherits(Travel, _Component);
+	var Blog = function (_Component) {
+	  _inherits(Blog, _Component);
 
-	  function Travel() {
-	    _classCallCheck(this, Travel);
+	  function Blog() {
+	    _classCallCheck(this, Blog);
 
-	    return _possibleConstructorReturn(this, (Travel.__proto__ || Object.getPrototypeOf(Travel)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).apply(this, arguments));
 	  }
 
-	  _createClass(Travel, [{
+	  _createClass(Blog, [{
 	    key: "render",
 	    value: function render() {
 	      var _this2 = this;
@@ -26895,7 +26806,7 @@
 	            { className: "entry-content" },
 	            entry.content
 	          ),
-	          _this2.props.location.pathname === "/protected/travel" ? _react2.default.createElement(
+	          _this2.props.location.pathname === "/protected/blog" ? _react2.default.createElement(
 	            "button",
 	            {
 	              className: "entry-btn",
@@ -26915,10 +26826,10 @@
 	    }
 	  }]);
 
-	  return Travel;
+	  return Blog;
 	}(_react.Component);
 
-	exports.default = (0, _reactRouterDom.withRouter)(Travel);
+	exports.default = (0, _reactRouterDom.withRouter)(Blog);
 
 /***/ },
 /* 238 */
@@ -26941,8 +26852,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!./Travel.css", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!./Travel.css");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./Blog.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./Blog.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26991,112 +26902,41 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Write = function (_Component) {
-	  _inherits(Write, _Component);
+	__webpack_require__(241);
 
-	  function Write() {
-	    _classCallCheck(this, Write);
+	var Books = function (_Component) {
+	  _inherits(Books, _Component);
 
-	    return _possibleConstructorReturn(this, (Write.__proto__ || Object.getPrototypeOf(Write)).apply(this, arguments));
+	  function Books() {
+	    _classCallCheck(this, Books);
+
+	    return _possibleConstructorReturn(this, (Books.__proto__ || Object.getPrototypeOf(Books)).apply(this, arguments));
 	  }
 
-	  _createClass(Write, [{
+	  _createClass(Books, [{
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "h4",
+	        "div",
 	        null,
 	        "bla"
 	      );
 	    }
 	  }]);
 
-	  return Write;
+	  return Books;
 	}(_react.Component);
 
-	exports.default = Write;
+	exports.default = (0, _reactRouterDom.withRouter)(Books);
 
 /***/ },
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouterDom = __webpack_require__(185);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	__webpack_require__(242);
-
-	var Photo = function (_Component) {
-	  _inherits(Photo, _Component);
-
-	  function Photo() {
-	    _classCallCheck(this, Photo);
-
-	    return _possibleConstructorReturn(this, (Photo.__proto__ || Object.getPrototypeOf(Photo)).apply(this, arguments));
-	  }
-
-	  _createClass(Photo, [{
-	    key: "render",
-	    value: function render() {
-	      var _this2 = this;
-
-	      var photos = this.props ? this.props.photos : [];
-	      var formatted = photos.map(function (photo) {
-	        return _react2.default.createElement(
-	          "div",
-	          { className: "photo-cont", key: photo.id },
-	          _react2.default.createElement("img", { className: "photo", src: photo.photo }),
-	          _this2.props.location.pathname === "/protected/photo" ? _react2.default.createElement(
-	            "button",
-	            {
-	              className: "photo-del",
-	              onClick: function onClick() {
-	                _this2.props.removePhoto(photo.id);
-	              }
-	            },
-	            "remove"
-	          ) : ""
-	        );
-	      });
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        formatted
-	      );
-	    }
-	  }]);
-
-	  return Photo;
-	}(_react.Component);
-
-	exports.default = (0, _reactRouterDom.withRouter)(Photo);
-
-/***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(243);
+	var content = __webpack_require__(242);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -27110,8 +26950,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!./Photo.css", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!./Photo.css");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./Books.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./Books.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27121,7 +26961,7 @@
 	}
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(229)(undefined);
@@ -27129,13 +26969,13 @@
 
 
 	// module
-	exports.push([module.id, ".photo-cont {\n  max-width: 800px;\n  margin: 50px auto 125px;\n}\n\n.photo {\n  max-width: 800px;\n}\n\n.photo-del {\n  float: right;\n}\n\n@media (max-width: 800px) {\n  .photo-cont {\n    margin: 50px auto;\n  }\n\n  .photo, .photo-cont {\n    max-width: 500px;\n  }\n}\n\n@media (max-width: 500px) {\n  .photo-cont {\n    margin: 50px auto;\n  }\n\n  .photo, .photo-cont {\n    max-width: 100%\n  }\n}\n", ""]);
+	exports.push([module.id, ".book-cont {\n  max-width: 800px;\n  margin: 50px auto 125px;\n}\n\n.book {\n  max-width: 800px;\n}\n\n.book-del {\n  float: right;\n}\n\n@media (max-width: 800px) {\n  .book-cont {\n    margin: 50px auto;\n  }\n\n  .book, .book-cont {\n    max-width: 500px;\n  }\n}\n\n@media (max-width: 500px) {\n  .book-cont {\n    margin: 50px auto;\n  }\n\n  .book, .book-cont {\n    max-width: 100%\n  }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27152,7 +26992,7 @@
 
 	var _reactRouterDom = __webpack_require__(185);
 
-	var _Auth = __webpack_require__(245);
+	var _Auth = __webpack_require__(244);
 
 	var _Auth2 = _interopRequireDefault(_Auth);
 
@@ -27164,7 +27004,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(246);
+	__webpack_require__(245);
 
 	var AdminLogin = function (_Component) {
 	  _inherits(AdminLogin, _Component);
@@ -27248,7 +27088,7 @@
 	exports.default = AdminLogin;
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27285,13 +27125,13 @@
 	exports.default = Auth;
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(247);
+	var content = __webpack_require__(246);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -27316,7 +27156,7 @@
 	}
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(229)(undefined);
@@ -27328,6 +27168,67 @@
 
 	// exports
 
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouterDom = __webpack_require__(185);
+
+	var _BlogEdit = __webpack_require__(248);
+
+	var _BlogEdit2 = _interopRequireDefault(_BlogEdit);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	__webpack_require__(253);
+
+	var Protected = function (_Component) {
+	  _inherits(Protected, _Component);
+
+	  function Protected() {
+	    _classCallCheck(this, Protected);
+
+	    return _possibleConstructorReturn(this, (Protected.__proto__ || Object.getPrototypeOf(Protected)).apply(this, arguments));
+	  }
+
+	  _createClass(Protected, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "edit" },
+	        _react2.default.createElement(_BlogEdit2.default, {
+	          entries: this.props.entries,
+	          addEntry: this.props.addEntry,
+	          removeEntry: this.props.removeEntry
+	        })
+	      );
+	    }
+	  }]);
+
+	  return Protected;
+	}(_react.Component);
+
+	exports.default = Protected;
 
 /***/ },
 /* 248 */
@@ -27351,13 +27252,9 @@
 
 	var _PhotoUpload2 = _interopRequireDefault(_PhotoUpload);
 
-	var _TravelEdit = __webpack_require__(253);
+	var _Blog = __webpack_require__(237);
 
-	var _TravelEdit2 = _interopRequireDefault(_TravelEdit);
-
-	var _PhotoEdit = __webpack_require__(254);
-
-	var _PhotoEdit2 = _interopRequireDefault(_PhotoEdit);
+	var _Blog2 = _interopRequireDefault(_Blog);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27367,93 +27264,124 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(255);
+	var BlogEdit = function (_Component) {
+	  _inherits(BlogEdit, _Component);
 
-	var Protected = function (_Component) {
-	  _inherits(Protected, _Component);
+	  function BlogEdit() {
+	    _classCallCheck(this, BlogEdit);
 
-	  function Protected() {
-	    _classCallCheck(this, Protected);
+	    var _this = _possibleConstructorReturn(this, (BlogEdit.__proto__ || Object.getPrototypeOf(BlogEdit)).call(this));
 
-	    return _possibleConstructorReturn(this, (Protected.__proto__ || Object.getPrototypeOf(Protected)).apply(this, arguments));
+	    _this.state = {
+	      blogPhoto: "",
+	      title: "",
+	      date: "",
+	      content: ""
+	    };
+	    _this.savePhoto = _this.savePhoto.bind(_this);
+	    return _this;
 	  }
 
-	  _createClass(Protected, [{
-	    key: "toggle",
-	    value: function toggle(e) {
-	      var elem = document.querySelectorAll(".edit-travel-link, .edit-photo-link");
-	      elem.forEach(function (elem) {
-	        return elem.classList.remove("active");
-	      });
-	      e.target.classList.add("active");
+	  _createClass(BlogEdit, [{
+	    key: "savePhoto",
+	    value: function savePhoto(photo) {
+	      this.setState({ blogPhoto: photo });
+	    }
+	  }, {
+	    key: "formatDate",
+	    value: function formatDate() {
+	      var string = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	      var dateArray = this.state.date.split("-");
+	      var month = string[dateArray[1] - 1];
+	      var day = dateArray[2];
+	      var year = dateArray[0];
+	      return month + " " + day + ", " + year;
 	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
 	      var _this2 = this;
 
+	      var _state = this.state,
+	          blogPhoto = _state.blogPhoto,
+	          title = _state.title,
+	          date = _state.date,
+	          content = _state.content;
+
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "edit" },
-	        _react2.default.createElement(_reactRouterDom.Redirect, { from: "/protected", exact: true, to: "/protected/travel" }),
+	        null,
 	        _react2.default.createElement(
 	          "div",
-	          { className: "link-cont" },
+	          { className: "edit-blog" },
 	          _react2.default.createElement(
-	            _reactRouterDom.Link,
-	            {
-	              onClick: function onClick(e) {
-	                return _this2.toggle(e);
-	              },
-	              className: "edit-travel-link active",
-	              to: "/protected/travel"
-	            },
-	            " ",
-	            "Edit Blog",
-	            " "
+	            "h2",
+	            { className: "h2" },
+	            " Edit Blog"
 	          ),
 	          _react2.default.createElement(
-	            _reactRouterDom.Link,
+	            "p",
+	            null,
+	            "Upload Photo:"
+	          ),
+	          _react2.default.createElement(_PhotoUpload2.default, { savePhoto: this.savePhoto, id: "file-input" }),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Title:"
+	          ),
+	          _react2.default.createElement("input", {
+	            placeholder: "title",
+	            onChange: function onChange(e) {
+	              return _this2.setState({ title: e.target.value });
+	            }
+	          }),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Date:"
+	          ),
+	          _react2.default.createElement("input", {
+	            className: "date",
+	            type: "date",
+	            placeholder: "date",
+	            onChange: function onChange(e) {
+	              return _this2.setState({ date: e.target.value });
+	            }
+	          }),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Content:"
+	          ),
+	          _react2.default.createElement("textarea", {
+	            placeholder: "content",
+	            onChange: function onChange(e) {
+	              return _this2.setState({ content: e.target.value });
+	            }
+	          }),
+	          _react2.default.createElement(
+	            "button",
 	            {
-	              onClick: function onClick(e) {
-	                return _this2.toggle(e);
-	              },
-	              className: "edit-photo-link",
-	              to: "/protected/photo"
+	              onClick: function onClick() {
+	                return _this2.props.addEntry(blogPhoto, title, _this2.formatDate(), content);
+	              }
 	            },
-	            " ",
-	            "Edit Photos",
-	            " "
+	            "make that sheeeeiiiitttt!"
 	          )
 	        ),
-	        _react2.default.createElement(_reactRouterDom.Route, {
-	          path: "/protected/travel",
-	          render: function render() {
-	            return _react2.default.createElement(_TravelEdit2.default, {
-	              entries: _this2.props.entries,
-	              addEntry: _this2.props.addEntry,
-	              removeEntry: _this2.props.removeEntry
-	            });
-	          }
-	        }),
-	        _react2.default.createElement(_reactRouterDom.Route, {
-	          path: "/protected/photo",
-	          render: function render() {
-	            return _react2.default.createElement(_PhotoEdit2.default, {
-	              photos: _this2.props.photos,
-	              savePhoto: _this2.props.savePhoto,
-	              removePhoto: _this2.props.removePhoto
-	            });
-	          }
+	        _react2.default.createElement(_Blog2.default, {
+	          entries: this.props.entries,
+	          removeEntry: this.props.removeEntry
 	        })
 	      );
 	    }
 	  }]);
 
-	  return Protected;
+	  return BlogEdit;
 	}(_react.Component);
 
-	exports.default = Protected;
+	exports.default = BlogEdit;
 
 /***/ },
 /* 249 */
@@ -27628,251 +27556,10 @@
 /* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouterDom = __webpack_require__(185);
-
-	var _PhotoUpload = __webpack_require__(249);
-
-	var _PhotoUpload2 = _interopRequireDefault(_PhotoUpload);
-
-	var _Travel = __webpack_require__(237);
-
-	var _Travel2 = _interopRequireDefault(_Travel);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TravelEdit = function (_Component) {
-	  _inherits(TravelEdit, _Component);
-
-	  function TravelEdit() {
-	    _classCallCheck(this, TravelEdit);
-
-	    var _this = _possibleConstructorReturn(this, (TravelEdit.__proto__ || Object.getPrototypeOf(TravelEdit)).call(this));
-
-	    _this.state = {
-	      blogPhoto: "",
-	      title: "",
-	      date: "",
-	      content: ""
-	    };
-	    _this.savePhoto = _this.savePhoto.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(TravelEdit, [{
-	    key: "savePhoto",
-	    value: function savePhoto(photo) {
-	      this.setState({ blogPhoto: photo });
-	    }
-	  }, {
-	    key: "formatDate",
-	    value: function formatDate() {
-	      var string = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-	      var dateArray = this.state.date.split("-");
-	      var month = string[dateArray[1] - 1];
-	      var day = dateArray[2];
-	      var year = dateArray[0];
-	      return month + " " + day + ", " + year;
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      var _this2 = this;
-
-	      var _state = this.state,
-	          blogPhoto = _state.blogPhoto,
-	          title = _state.title,
-	          date = _state.date,
-	          content = _state.content;
-
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "div",
-	          { className: "edit-blog" },
-	          _react2.default.createElement(
-	            "h2",
-	            { className: "h2" },
-	            " Edit Blog"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Upload Photo:"
-	          ),
-	          _react2.default.createElement(_PhotoUpload2.default, { savePhoto: this.savePhoto, id: "file-input" }),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Title:"
-	          ),
-	          _react2.default.createElement("input", {
-	            placeholder: "title",
-	            onChange: function onChange(e) {
-	              return _this2.setState({ title: e.target.value });
-	            }
-	          }),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Date:"
-	          ),
-	          _react2.default.createElement("input", {
-	            className: "date",
-	            type: "date",
-	            placeholder: "date",
-	            onChange: function onChange(e) {
-	              return _this2.setState({ date: e.target.value });
-	            }
-	          }),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Content:"
-	          ),
-	          _react2.default.createElement("textarea", {
-	            placeholder: "content",
-	            onChange: function onChange(e) {
-	              return _this2.setState({ content: e.target.value });
-	            }
-	          }),
-	          _react2.default.createElement(
-	            "button",
-	            {
-	              onClick: function onClick() {
-	                return _this2.props.addEntry(blogPhoto, title, _this2.formatDate(), content);
-	              }
-	            },
-	            "make that sheeeeiiiitttt!"
-	          )
-	        ),
-	        _react2.default.createElement(_Travel2.default, {
-	          entries: this.props.entries,
-	          removeEntry: this.props.removeEntry
-	        })
-	      );
-	    }
-	  }]);
-
-	  return TravelEdit;
-	}(_react.Component);
-
-	exports.default = TravelEdit;
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouterDom = __webpack_require__(185);
-
-	var _PhotoUpload = __webpack_require__(249);
-
-	var _PhotoUpload2 = _interopRequireDefault(_PhotoUpload);
-
-	var _Photo = __webpack_require__(241);
-
-	var _Photo2 = _interopRequireDefault(_Photo);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TravelEdit = function (_Component) {
-	  _inherits(TravelEdit, _Component);
-
-	  function TravelEdit() {
-	    _classCallCheck(this, TravelEdit);
-
-	    var _this = _possibleConstructorReturn(this, (TravelEdit.__proto__ || Object.getPrototypeOf(TravelEdit)).call(this));
-
-	    _this.state = {
-	      photo: ""
-	    };
-	    return _this;
-	  }
-
-	  _createClass(TravelEdit, [{
-	    key: "render",
-	    value: function render() {
-	      var _state = this.state,
-	          blogPhoto = _state.blogPhoto,
-	          title = _state.title,
-	          date = _state.date,
-	          content = _state.content;
-
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "div",
-	          { className: "edit-photos" },
-	          _react2.default.createElement(
-	            "h2",
-	            { className: "h2" },
-	            "Edit Photos"
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            null,
-	            "Upload Photo:"
-	          ),
-	          _react2.default.createElement(_PhotoUpload2.default, { savePhoto: this.props.savePhoto, id: "file-input2" })
-	        ),
-	        _react2.default.createElement(_Photo2.default, {
-	          photos: this.props.photos,
-	          removePhoto: this.props.removePhoto
-	        })
-	      );
-	    }
-	  }]);
-
-	  return TravelEdit;
-	}(_react.Component);
-
-	exports.default = TravelEdit;
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(256);
+	var content = __webpack_require__(254);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -27897,7 +27584,7 @@
 	}
 
 /***/ },
-/* 256 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(229)(undefined);
@@ -27905,13 +27592,13 @@
 
 
 	// module
-	exports.push([module.id, ".edit-blog, .edit-photos {\n  max-width: 100%;\n  margin: auto;\n  text-align: center;\n  background-color: #1A1A1A;\n}\n\n.edit-photos {\n  padding: 25px 0 50px;\n}\n\n.edit-blog {\n  padding-top: 25px;\n}\n\n.h2 {\n  font-size: 30px;\n}\n\n.edit-blog input, .edit-blog textarea, .edit-blog p, .edit-photos input, .edit-photos p {\n  display: block;\n  margin: 5px auto;\n  width: 80%;\n  padding: 20px;\n  border: none;\n  border-radius: 2px;\n}\n\n.edit-blog input, .edit-blog textarea, .edit-photos input {\n  background-color: black;\n  border-bottom: 1px solid #2e2e2e;\n  box-shadow: 0px 2px 2px #1a1a1a inset;\n  color: #999;\n}\n\n.edit-blog textarea {\n  height: 250px;\n}\n\n.edit-blog p, .edit-photos p {\n  text-align: left;\n  padding-left: 0px;\n  padding-bottom: 0px;\n}\n\n.edit-blog button {\n  margin: 20px;\n  width: 200px;\n  height: 50px;\n  border-radius: 10px;\n  background-color: #D0ECEE;\n  border: none;\n}\n\n.link-cont {\n  margin: 40px;\n  text-align: center;\n}\n\n.edit-travel-link, .edit-photo-link {\n  margin: 20px;\n  font-family: 'Lato', sans-serif;\n  color: lightgrey;\n  text-decoration: none;\n  font-weight: 100;\n  transition: all .5s ease-in;\n}\n\n.edit-travel-link:hover, .edit-photo-link:hover {\n  color: grey;\n}\n\n.active {\n  color: grey;\n}\n\ninput[type=date] {\n    color: #999;\n}\n", ""]);
+	exports.push([module.id, ".edit-blog {\n  max-width: 100%;\n  margin: auto;\n  text-align: center;\n  background-color: #1A1A1A;\n}\n\n.edit-blog {\n  padding-top: 25px;\n}\n\n.h2 {\n  font-size: 30px;\n}\n\n.edit-blog input, .edit-blog textarea, .edit-blog p {\n  display: block;\n  margin: 5px auto;\n  width: 80%;\n  padding: 20px;\n  border: none;\n  border-radius: 2px;\n}\n\n.edit-blog input, .edit-blog textarea {\n  background-color: black;\n  border-bottom: 1px solid #2e2e2e;\n  box-shadow: 0px 2px 2px #1a1a1a inset;\n  color: #999;\n}\n\n.edit-blog textarea {\n  height: 250px;\n}\n\n.edit-blog p {\n  text-align: left;\n  padding-left: 0px;\n  padding-bottom: 0px;\n}\n\n.edit-blog button {\n  margin: 20px;\n  width: 200px;\n  height: 50px;\n  border-radius: 10px;\n  background-color: #D0ECEE;\n  border: none;\n}\n\n.link-cont {\n  margin: 40px;\n  text-align: center;\n}\n\n.edit-blog-link {\n  margin: 20px;\n  font-family: 'Lato', sans-serif;\n  color: lightgrey;\n  text-decoration: none;\n  font-weight: 100;\n  transition: all .5s ease-in;\n}\n\n.edit-blog-link:hover {\n  color: grey;\n}\n\n.active {\n  color: grey;\n}\n\ninput[type=date] {\n    color: #999;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 257 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27928,7 +27615,7 @@
 
 	var _reactRouterDom = __webpack_require__(185);
 
-	var _Auth = __webpack_require__(245);
+	var _Auth = __webpack_require__(244);
 
 	var _Auth2 = _interopRequireDefault(_Auth);
 
@@ -27945,10 +27632,7 @@
 	      return _Auth2.default.isAuth ? _react2.default.createElement(Component, _extends({}, props, {
 	        entries: rest.entries,
 	        addEntry: rest.addEntry,
-	        removeEntry: rest.removeEntry,
-	        photos: rest.photos,
-	        savePhoto: rest.savePhoto,
-	        removePhoto: rest.removePhoto
+	        removeEntry: rest.removeEntry
 	      })) : _react2.default.createElement(_reactRouterDom.Redirect, {
 	        to: {
 	          pathname: "/admin",
@@ -27962,13 +27646,13 @@
 	exports.default = PrivateRoute;
 
 /***/ },
-/* 258 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(259);
+	var content = __webpack_require__(257);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -27993,7 +27677,7 @@
 	}
 
 /***/ },
-/* 259 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(229)(undefined);
@@ -28007,13 +27691,13 @@
 
 
 /***/ },
-/* 260 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(261);
+	var content = __webpack_require__(259);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -28038,7 +27722,7 @@
 	}
 
 /***/ },
-/* 261 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(229)(undefined);

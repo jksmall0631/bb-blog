@@ -77,30 +77,9 @@ app.post("/api/v1/blog", (req, res) => {
     .catch(err => res.status(404).json(err));
 });
 
-app.post("/api/v1/photos", (req, res) => {
-  const { photo } = req.body;
-  const photoObj = { photo };
-  database("photos")
-    .insert(photoObj)
-    .returning("*")
-    .then(data => res.send(data))
-    .catch(err => res.status(404).json(err));
-});
-
 app.delete("/api/v1/blog", (req, res) => {
   const { id } = req.body;
   database("posts").where("id", id).select().del().then(count => {
-    if (count === 0) {
-      res.status(422).json({ "Response 422": "Unprocessable Entity" });
-    } else {
-      res.status(200).json({ "Response 200": "OK" });
-    }
-  });
-});
-
-app.delete("/api/v1/photos", (req, res) => {
-  const { id } = req.body;
-  database("photos").where("id", id).select().del().then(count => {
     if (count === 0) {
       res.status(422).json({ "Response 422": "Unprocessable Entity" });
     } else {
@@ -113,13 +92,6 @@ app.get("/api/v1/blog", (req, res) => {
   database("posts")
     .select()
     .then(posts => res.status(200).json(posts))
-    .catch(error => res.status(404).json(error));
-});
-
-app.get("/api/v1/photos", (req, res) => {
-  database("photos")
-    .select()
-    .then(photos => res.status(200).json(photos))
     .catch(error => res.status(404).json(error));
 });
 

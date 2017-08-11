@@ -6,9 +6,9 @@ import {
   withRouter
 } from "react-router-dom";
 
-require("./Travel.css");
+require("./Blog.css");
 
-class Travel extends Component {
+class Blog extends Component {
   render() {
     let entries = this.props ? this.props.entries : [];
     let formatted = entries.map(entry => {
@@ -24,7 +24,7 @@ class Travel extends Component {
           <p className="entry-content">
             {entry.content}
           </p>
-          {this.props.location.pathname === "/protected/travel"
+          {this.props.location.pathname === "/protected/blog"
             ? <button
                 className="entry-btn"
                 onClick={() => {
@@ -45,4 +45,4 @@ class Travel extends Component {
   }
 }
 
-export default withRouter(Travel);
+export default withRouter(Blog);

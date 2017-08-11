@@ -19,22 +19,13 @@ export default class Nav extends Component {
             </Link>
           </li>
           <li>
-            <Link className="nav" to="/travel">
-              . &nbsp;&nbsp; TRAVEL &nbsp;&nbsp; .
+            <Link className="nav" to="/blog">
+              . &nbsp;&nbsp; BLOG &nbsp;&nbsp; .
             </Link>
           </li>
           <li>
-            <a
-              className="nav"
-              href="https://theprose.com/clearly"
-              target="_blank"
-            >
-              . &nbsp;&nbsp; WRITE &nbsp;&nbsp; .
-            </a>
-          </li>
-          <li>
-            <Link className="nav" to="/photo">
-              . &nbsp;&nbsp; PHOTOGRAPH &nbsp;&nbsp; .
+            <Link className="nav" to="/books">
+              . &nbsp;&nbsp; BOOKS &nbsp;&nbsp; .
             </Link>
           </li>
         </ul>

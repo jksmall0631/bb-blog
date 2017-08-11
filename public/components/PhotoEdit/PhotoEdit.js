@@ -9,7 +9,7 @@ import {
 import PhotoUpload from "../PhotoUpload/PhotoUpload";
 import Photo from "../Photo/Photo";
 
-export default class TravelEdit extends Component {
+export default class BlogEdit extends Component {
   constructor() {
     super();
     this.state = {

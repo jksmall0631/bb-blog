@@ -9,7 +9,7 @@ import {
 import Nav from "../Nav/Nav";
 import Welcome from "../Welcome/Welcome";
 import About from "../About/About";
-import Travel from "../Travel/Travel";
+import Blog from "../Blog/Blog";
 import Write from "../Write/Write";
 import Photo from "../Photo/Photo";
 import AdminLogin from "../AdminLogin/AdminLogin";
@@ -148,9 +148,9 @@ export default class App extends Component {
         <Route exact path="/" component={Welcome} />
         <Route path="/about" component={About} />
         <Route
-          path="/travel"
+          path="/blog"
           render={() =>
-            <Travel entries={this.state.entries} component={Travel} />}
+            <Blog entries={this.state.entries} component={Blog} />}
         />
         <Route path="/write" component={Write} />
         <Route

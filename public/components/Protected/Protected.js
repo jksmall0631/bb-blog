@@ -6,7 +6,7 @@ import {
   Redirect
 } from "react-router-dom";
 import PhotoUpload from "../PhotoUpload/PhotoUpload";
-import TravelEdit from "../TravelEdit/TravelEdit";
+import BlogEdit from "../BlogEdit/BlogEdit";
 import PhotoEdit from "../PhotoEdit/PhotoEdit";
 
 require("./Protected.css");
@@ -14,7 +14,7 @@ require("./Protected.css");
 export default class Protected extends Component {
   toggle(e) {
     const elem = document.querySelectorAll(
-      ".edit-travel-link, .edit-photo-link"
+      ".edit-blog-link, .edit-photo-link"
     );
     elem.forEach(elem => elem.classList.remove("active"));
     e.target.classList.add("active");
@@ -23,12 +23,12 @@ export default class Protected extends Component {
   render() {
     return (
       <div className="edit">
-        <Redirect from="/protected" exact to="/protected/travel" />
+        <Redirect from="/protected" exact to="/protected/blog" />
         <div className="link-cont">
           <Link
             onClick={e => this.toggle(e)}
-            className="edit-travel-link active"
-            to="/protected/travel"
+            className="edit-blog-link active"
+            to="/protected/blog"
           >
             {" "}Edit Blog{" "}
           </Link>
@@ -42,9 +42,9 @@ export default class Protected extends Component {
         </div>
 
         <Route
-          path="/protected/travel"
+          path="/protected/blog"
           render={() =>
-            <TravelEdit
+            <BlogEdit
               entries={this.props.entries}
               addEntry={this.props.addEntry}
               removeEntry={this.props.removeEntry}

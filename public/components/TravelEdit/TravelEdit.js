@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 
 import PhotoUpload from "../PhotoUpload/PhotoUpload";
-import Travel from "../Travel/Travel";
+import Blog from "../Blog/Blog";
 
-export default class TravelEdit extends Component {
+export default class BlogEdit extends Component {
   constructor() {
     super();
     this.state = {
@@ -79,7 +79,7 @@ export default class TravelEdit extends Component {
             make that sheeeeiiiitttt!
           </button>
         </div>
-        <Travel
+        <Blog
           entries={this.props.entries}
           removeEntry={this.props.removeEntry}
         />

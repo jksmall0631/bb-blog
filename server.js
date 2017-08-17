@@ -89,6 +89,7 @@ app.delete("/api/v1/blog", (req, res) => {
 });
 
 app.get("/api/v1/blog", (req, res) => {
+  console.log(req, res)
   database("posts")
     .select()
     .then(posts => res.status(200).json(posts))

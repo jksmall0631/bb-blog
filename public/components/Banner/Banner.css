@@ -5,6 +5,10 @@
   margin: auto;
 }
 
+.logo-cont {
+  margin-bottom: 25px;
+}
+
 .logo {
   max-width: 450px;
 }

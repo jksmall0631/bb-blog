@@ -33,7 +33,7 @@ export default class App extends Component {
   }
 
   blogEntries() {
-    const url = "https://secleere.herokuapp.com/api/v1/blog";
+    const url = "http://localhost:3000/api/v1/blog";
     fetch(url, {
       method: "GET",
       headers: {
@@ -45,11 +45,11 @@ export default class App extends Component {
       .then(data => {
         this.setState({ entries: data });
       })
-      .catch(err => alert(err));
+      .catch(err => console.log(err));
   }
 
   addEntry(photo, title, date, content) {
-    const url = "https://secleere.herokuapp.com/api/v1/blog";
+    const url = "http://localhost:3000/api/v1/blog";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -65,7 +65,7 @@ export default class App extends Component {
   }
 
   removeEntry(id) {
-    const url = "https://secleere.herokuapp.com/api/v1/blog";
+    const url = "http://localhost:3000/api/v1/blog";
     fetch(url, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },

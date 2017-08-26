@@ -28,6 +28,21 @@ export default class Nav extends Component {
               . &nbsp;&nbsp; BOOKS &nbsp;&nbsp; .
             </Link>
           </li>
+          <li>
+            <Link className="nav" to="/events">
+              . &nbsp;&nbsp; UPCOMING EVENTS &nbsp;&nbsp; .
+            </Link>
+          </li>
+          <li>
+            <Link className="nav" to="/subscribe">
+              . &nbsp;&nbsp; SUBSCRIBE &nbsp;&nbsp; .
+            </Link>
+          </li>
+          <li>
+            <Link className="nav" to="/contact">
+              . &nbsp;&nbsp; CONTACT &nbsp;&nbsp; .
+            </Link>
+          </li>
         </ul>
       </nav>
     );

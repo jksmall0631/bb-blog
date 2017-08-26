@@ -1,32 +1,16 @@
 .book-cont {
+  margin: auto;
+}
+
+.book-title {
   max-width: 800px;
-  margin: 50px auto 125px;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
 }
 
-.book {
+.book-desc {
   max-width: 800px;
-}
-
-.book-del {
-  float: right;
-}
-
-@media (max-width: 800px) {
-  .book-cont {
-    margin: 50px auto;
-  }
-
-  .book, .book-cont {
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 500px) {
-  .book-cont {
-    margin: 50px auto;
-  }
-
-  .book, .book-cont {
-    max-width: 100%
-  }
+  font-weight: 300;
+  line-height: 22px;
 }

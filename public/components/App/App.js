@@ -11,6 +11,7 @@ import Welcome from "../Welcome/Welcome";
 import About from "../About/About";
 import Blog from "../Blog/Blog";
 import Books from "../Books/Books";
+import Events from "../Events/Events";
 import AdminLogin from "../AdminLogin/AdminLogin";
 import Protected from "../Protected/Protected";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -90,6 +91,7 @@ export default class App extends Component {
         <Nav />
         <Route exact path="/" component={Welcome} />
         <Route path="/about" component={About} />
+        <Route path="/events" component={Events} />
         <Route
           path="/blog"
           render={() =>

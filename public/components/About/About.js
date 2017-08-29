@@ -7,38 +7,75 @@ export default class About extends Component {
     return (
       <div className="about-cont component">
         <div className="about-card">
-            <img src="../../resources/sharon-about.JPG" className="about-img" />
-            <div className="about-txt">
-              <h2>Sharon Cleere</h2>
-              <p>
-                Sharon is a writer, philosopher, meditation guide and yoga
-                instructor. Sharon's goal in all of her endeavors is to encourage
-                others to explore and discover their own perspectives and develop
-                their inner peace. She loves to write for and teach children because
-                she believes showing the youth ways to cultivate inner peace will
-                develop a more kinder society.
-                <br />
-                <br />
-                She received her meditation and yoga instructor's certification in
-                India where she spent time immersed in the topics of meditation,
-                yoga, philosophy, Taoism, Hinduism and mindfulness. She has two
-                bachelor's degrees: one in communication and the other in
-                philosophy. Sharon's educational background trained her to make
-                seemingly complex topics easy to understand. Her writing, guided
-                meditation and yoga classes meet at the intersection of deep
-                philosophical topics and light-hearted play.
-              </p>
-            </div>
+          <img
+            src="../../resources/BB-Sharon-headshot.png"
+            className="about-img"
+          />
+          <div className="about-txt">
+            <h2>Sharon Cleere</h2>
+            <p>
+              Sharon Cleere is a writer, philosopher, meditation guide and yoga
+              instructor. Sharon's goal in all of her endeavors is to encourage
+              others to explore and discover their own perspectives and develop
+              their inner peace. She loves to write for and teach children
+              because she believes showing the youth ways to cultivate inner
+              peace will develop a more kinder society.
+              <br />
+              <br />
+              She received her meditation and yoga instructor's certification in
+              India where she spent time immersed in the topics of meditation,
+              yoga, philosophy, Taoism, Hinduism and mindfulness. She has two
+              bachelor's degrees: one in communication and the other in
+              philosophy. Sharon's educational background trained her to make
+              seemingly complex topics easy to understand. Her writing, guided
+              meditation and yoga classes meet at the intersection of deep
+              philosophical topics and light-hearted play.
+            </p>
+          </div>
         </div>
         <div className="about-card">
-          <img src="../../resources/tiffiny-about.JPG" className="about-img" />
+          <img
+            src="../../resources/BB-Tiffiny-headshot.png"
+            className="about-img"
+          />
           <div className="about-txt">
             <h2>Tiffiny Costello</h2>
             <p>
-              Tiffiny Costello is a digital marketing expert, with a focus in the
-              yoga, outdoor, and travel industries. For fun, she enjoys playing
-              music in Denver, CO, hiking up mountains, is always looking for
-              adventure!
+              Tiffiny Costello is a digital marketing expert, with a focus in
+              the yoga, outdoor, and travel industries. For fun, she enjoys
+              playing music in Denver, CO, hiking up mountains, is always
+              looking for adventure!
+            </p>
+          </div>
+        </div>
+        <div className="about-card">
+          <img
+            src="../../resources/BB-Beth-headshot.png"
+            className="about-img"
+          />
+          <div className="about-txt">
+            <h2>Beth Fonseca</h2>
+            <p>
+              B. Fonseca (lyingfawn) is a friendly neighborhood cryptid who is
+              very passionate about storytelling. When she isn't telling dad
+              jokes or playing Dungeons & Dragons, you can usually find her
+              camped out at a local cafe, nose-deep in coffee and sketchbooks,
+              writing fiction and illustrating fantasy, sci-fi, and whatever is
+              in-between and beyond. She is 22 years old and lives in Colorado.
+            </p>
+          </div>
+        </div>
+        <div className="about-card">
+          <img
+            src="../../resources/BB-Jeremy-headshot.png"
+            className="about-img"
+          />
+          <div className="about-txt">
+            <h2>Jeremy Duran</h2>
+            <p>
+              Jeremy Duran is a professional graphic designer and artist. When he
+              isn't doing artsy fartsy things (which is rare) he can be found
+              causing mayhem in the city or being your local barista.
             </p>
           </div>
         </div>

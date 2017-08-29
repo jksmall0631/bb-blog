@@ -2,7 +2,8 @@ nav {
   width: 100%;
   text-align: center;
   position: fixed;
-  padding: 62px 0 25px;
+  padding: 25px 0;
+  background-color: rgba(40, 64, 26, 0.7);
 }
 
 ol, ul {
@@ -20,7 +21,7 @@ li {
 }
 
 .nav {
-  color: black;
+  color: #ffeca7;
   text-decoration: none;
   font-weight: 300;
   margin: 0 20px;

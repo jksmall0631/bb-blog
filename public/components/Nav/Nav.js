@@ -14,12 +14,10 @@ export default class Nav extends Component {
     itemTranslate = Math.min(0, scrollTop/3 - 60);
     let collapseNav = document.querySelector('.nav-cont');
     if(scrollTop > 85) {
-      collapseNav.style.transform = 'translate(0px, -40px)';
-      collapseNav.style.backgroundColor = 'white';
+      collapseNav.style.transform = 'translate(0px, -70px)';
     }
     if(scrollTop < 85) {
       collapseNav.style.transform = 'translate(0px, 0px)';
-      collapseNav.style.backgroundColor = 'transparent';
     }
   }
 

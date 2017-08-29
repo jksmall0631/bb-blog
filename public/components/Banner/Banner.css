@@ -11,6 +11,8 @@
 
 .logo {
   max-width: 450px;
+  background-color: rgba(255, 236, 167, 1.0);
+  border-radius: 50%;
 }
 
 .title {

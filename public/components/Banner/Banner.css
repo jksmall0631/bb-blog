@@ -9,7 +9,7 @@
   margin: 0 auto 25px;
   max-width: 440px;
   height: 410px;
-  background-color: rgba(255, 236, 167, 1.0);
+  background-color: #ffeca7;
   border-radius: 50%;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .title {
-  color: black;
+  color: #ffeca7;
   font-weight: 300;
   font-size: 40px;
   letter-spacing: 5px;
@@ -27,7 +27,7 @@
 }
 
 .motto {
-  color: black;
+  color: #ffeca7;
   font-weight: 300;
   font-size: 23px;
   letter-spacing: 5px;

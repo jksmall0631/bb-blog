@@ -1,5 +1,8 @@
 nav {
-  margin: 50px 0 50px 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  padding: 62px 0 25px;
 }
 
 ol, ul {
@@ -9,6 +12,11 @@ ol, ul {
 
 li {
   display: inline-block;
+}
+
+.nav-cont {
+  transition: all ease-out 0.5s;
+  z-index: 100;
 }
 
 .nav {

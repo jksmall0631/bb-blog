@@ -4,9 +4,37 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 require("./Nav.css");
 
 export default class Nav extends Component {
+  constructor() {
+    super();
+    this.collapseNav = this.collapseNav.bind(this);
+  }
+
+  collapseNav(event){
+    let scrollTop = event.srcElement.body.scrollTop,
+    itemTranslate = Math.min(0, scrollTop/3 - 60);
+    let collapseNav = document.querySelector('.nav-cont');
+    if(scrollTop > 85) {
+      collapseNav.style.transform = 'translate(0px, -40px)';
+      collapseNav.style.backgroundColor = 'white';
+    }
+    if(scrollTop < 85) {
+      collapseNav.style.transform = 'translate(0px, 0px)';
+      collapseNav.style.backgroundColor = 'transparent';
+    }
+  }
+
+  componentDidMount(){
+    window.addEventListener('scroll', this.collapseNav)
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.collapseNav)
+  }
+
+
   render() {
     return (
-      <nav>
+      <nav className="nav-cont">
         <ul>
           <li>
             <Link className="nav" to="/">
@@ -30,7 +58,7 @@ export default class Nav extends Component {
           </li>
           <li>
             <Link className="nav" to="/events">
-              . &nbsp;&nbsp; UPCOMING EVENTS &nbsp;&nbsp; .
+              . &nbsp;&nbsp; EVENTS &nbsp;&nbsp; .
             </Link>
           </li>
           <li>

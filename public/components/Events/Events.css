@@ -1,4 +1,18 @@
-.events-button {
-  width: 50%;
+.event-button {
+  width: 500px;
+  display: block;
+  border: none;
   height: 100px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 0 auto 20px;
+  transition: all .2s ease-in-out;
+}
+
+.event-button:hover {
+  transform: scale(1.05)
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,0 +1,20 @@
+.contact {
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+  background: #eee;
+}
+
+.contact-label {
+  text-align: left;
+}
+
+.form-sect {
+  text-align: left;
+  margin: auto;
+  width: 250px;
+}
+
+.form-control {
+  width: 100%;
+}

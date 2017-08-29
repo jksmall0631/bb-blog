@@ -9,3 +9,12 @@ html {
 body {
   font-family: 'Lato', sans-serif;
 }
+
+.main-cont {
+  position: relative;
+  top: 170px;
+}
+
+.component {
+  padding-bottom: 50px;
+}

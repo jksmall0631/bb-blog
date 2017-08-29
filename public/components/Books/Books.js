@@ -11,7 +11,7 @@ require("./Books.css");
 class Books extends Component {
   render() {
     return (
-      <div className="book-cont">
+      <div className="book-cont component">
         <h2 className="book-title">The Rainbow Phenomenon</h2>
         <p className="book-desc">
           "The Rainbow Phenomenon" is a simple yet enchanting story explaining

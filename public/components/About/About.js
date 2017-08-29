@@ -13,6 +13,7 @@ export default class About extends Component {
           />
           <div className="about-txt">
             <h2>Sharon Cleere</h2>
+            <h3>Author and Founder</h3>
             <p>
               Sharon Cleere is a writer, philosopher, meditation guide and yoga
               instructor. Sharon's goal in all of her endeavors is to encourage
@@ -40,6 +41,7 @@ export default class About extends Component {
           />
           <div className="about-txt">
             <h2>Tiffiny Costello</h2>
+            <h3>Marketing Manager</h3>
             <p>
               Tiffiny Costello is a digital marketing expert, with a focus in
               the yoga, outdoor, and travel industries. For fun, she enjoys
@@ -55,6 +57,7 @@ export default class About extends Component {
           />
           <div className="about-txt">
             <h2>Beth Fonseca</h2>
+            <h3>Illustrator</h3>
             <p>
               B. Fonseca (lyingfawn) is a friendly neighborhood cryptid who is
               very passionate about storytelling. When she isn't telling dad
@@ -72,6 +75,7 @@ export default class About extends Component {
           />
           <div className="about-txt">
             <h2>Jeremy Duran</h2>
+            <h3>Graphic Designer</h3>
             <p>
               Jeremy Duran is a professional graphic designer and artist. When he
               isn't doing artsy fartsy things (which is rare) he can be found

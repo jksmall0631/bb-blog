@@ -9,7 +9,7 @@
   margin: 0 auto 25px;
   max-width: 440px;
   height: 410px;
-  background-color: #ffeca7;
+  background-color: #f9f3c2;
   border-radius: 50%;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .title {
-  color: #ffeca7;
+  color: #f9f3c2;
   font-weight: 300;
   font-size: 40px;
   letter-spacing: 5px;
@@ -27,7 +27,7 @@
 }
 
 .motto {
-  color: #ffeca7;
+  color: #f9f3c2;
   font-weight: 300;
   font-size: 23px;
   letter-spacing: 5px;

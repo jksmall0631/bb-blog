@@ -1,4 +1,10 @@
+.events-cont {
+  padding-top: 50px;
+}
+
 .event-button {
+  color: white;
+  font-size: 22px;
   width: 500px;
   display: block;
   border: none;
@@ -7,6 +13,22 @@
   border-radius: 4px;
   margin: 0 auto 20px;
   transition: all .2s ease-in-out;
+}
+
+.purple {
+  background-color: #9b305a;
+}
+
+.green {
+  background-color: #a3ad23;
+}
+
+.brown {
+  background-color: #885621;
+}
+
+.orange {
+  background-color: #e77b0a;
 }
 
 .event-button:hover {

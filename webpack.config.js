@@ -17,6 +17,10 @@ module.exports = {
           presets: ['es2015', 'react', 'stage-2'],
         },
       },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        loader: 'file-loader',
+      },
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.scss$/, loader: 'style!css!sass' },
       {test: /\.svg$/, loaders: 'file'},

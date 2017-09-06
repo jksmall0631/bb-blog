@@ -1,0 +1,6 @@
+<system.webServer>
+    <staticContent>
+      <mimeMap fileExtension=".ttf" mimeType="font/truetype" />
+      <mimeMap fileExtension=".otf" mimeType="font/opentype" />
+    </staticContent>
+</system.webServer>

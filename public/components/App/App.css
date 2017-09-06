@@ -6,15 +6,25 @@ html {
   background-size: cover;
 }
 
+/*@font-face {
+  font-family: 'funkydori';
+  src: url("../../resources/Funkydori.ttf");
+  src: url("../../resources/Funkydori.ttf") format('truetype'),
+       url("../../resources/Funkydori.otf") format('opentype');
+  font-style: normal;
+}*/
+
 body {
   font-family: 'Lato', sans-serif;
+  /*font-family: 'funkydori', sans-serif;*/
 }
 
 .main-cont {
   position: relative;
-  top: 170px;
+  top: 160px;
 }
 
 .component {
   padding-bottom: 50px;
+  padding-top: 25px;
 }

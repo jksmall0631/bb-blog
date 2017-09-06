@@ -7,19 +7,19 @@
 
 .logo-cont {
   margin: 0 auto 25px;
-  max-width: 440px;
-  height: 410px;
-  background-color: #f9f3c2;
+  max-width: 325px;
+  height: 300px;
+  background-color: cornsilk;
   border-radius: 50%;
 }
 
 .logo {
-  max-width: 450px;
+  max-width: 300px;
   margin-top: 12px;
 }
 
 .title {
-  color: #f9f3c2;
+  color: cornsilk;
   font-weight: 300;
   font-size: 40px;
   letter-spacing: 5px;
@@ -27,7 +27,7 @@
 }
 
 .motto {
-  color: #f9f3c2;
+  color: cornsilk;
   font-weight: 300;
   font-size: 23px;
   letter-spacing: 5px;

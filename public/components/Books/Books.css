@@ -1,16 +1,25 @@
 .book-cont {
   margin: auto;
+  background-color: rgb(155, 48, 90);
+}
+
+.book-img {
+  max-width: 350px;
+  align-self: flex-start;
+  padding-right: 30px;
 }
 
 .book-title {
   max-width: 800px;
   text-align: center;
-  margin: 10px;
-  font-size: 20px;
+  margin: 40px 0 20px;
+  font-size: 30px;
+  color: #fffbce;
 }
 
 .book-desc {
   max-width: 800px;
-  font-weight: 300;
-  line-height: 22px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fffbce;
 }

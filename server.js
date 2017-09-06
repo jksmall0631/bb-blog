@@ -22,6 +22,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static("public"));
+app.use('/static', express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

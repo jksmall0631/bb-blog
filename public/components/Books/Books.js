@@ -11,7 +11,7 @@ require("./Books.css");
 class Books extends Component {
   render() {
     return (
-      <div className="book-cont component">
+      <div id="books" className="book-cont component">
         <div className="about-card">
           <img className="book-img" src="../../resources/coming-soon2.png" />
           <div className="about-text">

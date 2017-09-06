@@ -6,7 +6,7 @@ require("./Events.css");
 export default class Events extends Component {
   render() {
     return (
-      <div className="component">
+      <div id="events" className="component">
         <div className="events-cont">
           <Link to="/classes">
             <button className="event-button purple">CLASSES</button>

@@ -5,7 +5,7 @@ require("./About.css");
 export default class About extends Component {
   render() {
     return (
-      <div className="about-cont component">
+      <div id="about" className="about-cont component">
         <div className="about-card">
           <img
             src="../../resources/BB-Sharon-headshot.png"

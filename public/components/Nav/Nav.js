@@ -35,39 +35,39 @@ export default class Nav extends Component {
       <nav className="nav-cont">
         <ul>
           <li>
-            <Link className="nav" to="/">
+            <a className="nav" href="#welcome">
               . &nbsp;&nbsp; WELCOME &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="nav" to="/about">
+            <a className="nav" href="#about">
               . &nbsp;&nbsp; ABOUT &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="nav" to="/blog">
+            <a className="nav" href="#blog">
               . &nbsp;&nbsp; BLOG &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="nav" to="/books">
+            <a className="nav" href="#books">
               . &nbsp;&nbsp; BOOKS &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="nav" to="/events">
+            <a className="nav" href="#events">
               . &nbsp;&nbsp; EVENTS &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="nav" to="/subscribe">
+            <a className="nav" href="#subscribe">
               . &nbsp;&nbsp; SUBSCRIBE &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="nav" to="/contact">
+            <a className="nav" href="#contact">
               . &nbsp;&nbsp; CONTACT &nbsp;&nbsp; .
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

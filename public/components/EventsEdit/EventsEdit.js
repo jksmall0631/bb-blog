@@ -102,7 +102,10 @@ export default class EventsEdit extends Component {
             create event!
           </button>
         </div>
-        <Events />
+        <Events
+          entries={this.props.entries}
+          removeEntry={this.props.removeEntry}
+        />
       </div>
     );
   }

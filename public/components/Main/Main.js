@@ -8,7 +8,7 @@ import Events from "../Events/Events";
 import Subscribe from "../Subscribe/Subscribe";
 import Footer from "../Footer/Footer";
 
-const Main = ({ entries, addEntry, removeEntry }) => {
+const Main = ({ entries, removeEntry }) => {
   return (
     <div>
       <Nav />
@@ -17,7 +17,6 @@ const Main = ({ entries, addEntry, removeEntry }) => {
         <Books />
         <Events
           entries={entries}
-          addEntry={addEntry}
           removeEntry={removeEntry}
         />
         <About />

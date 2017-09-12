@@ -7,6 +7,7 @@ require("./Events.css");
 
 export default class Events extends Component {
   render() {
+    console.log(this.props.entries)
     return (
       <div id="events" className="component">
         <div className="events-cont">

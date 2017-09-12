@@ -89,7 +89,6 @@ export default class App extends Component {
           render={() =>
             <Main
               entries={this.state.entries}
-              addEntry={this.props.addEntry}
               removeEntry={this.props.removeEntry}
             />}
         />

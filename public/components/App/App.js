@@ -25,11 +25,11 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.blogEntries();
+    this.eventEntries();
   }
 
-  blogEntries() {
-    const url = "http://localhost:3000/api/v1/blog";
+  eventEntries() {
+    const url = "http://localhost:3000/api/v1/events";
     fetch(url, {
       method: "GET",
       headers: {
@@ -44,12 +44,12 @@ export default class App extends Component {
       .catch(err => console.log(err));
   }
 
-  addEntry(photo, title, date, content) {
-    const url = "http://localhost:3000/api/v1/blog";
+  addEntry(photo, title, date, desc, type, expire) {
+    const url = "http://localhost:3000/api/v1/events";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ photo, title, date, content })
+      body: JSON.stringify({ photo, title, date, desc, type, expire })
     })
       .then(data => data.json())
       .then(data => {
@@ -57,11 +57,11 @@ export default class App extends Component {
         entries.push(data[0]);
         this.setState({ entries });
       })
-      .catch(err => alert(err));
+      .catch(err => console.log(err));
   }
 
   removeEntry(id) {
-    const url = "http://localhost:3000/api/v1/blog";
+    const url = "http://localhost:3000/api/v1/events";
     fetch(url, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
@@ -83,8 +83,16 @@ export default class App extends Component {
   render() {
     return (
       <main id="welcome">
-        <Route exact path="/" component={Main} />
         <Route exact path="/admin" component={AdminLogin} />
+        <Route
+          exact path="/"
+          render={() =>
+            <Main
+              entries={this.state.entries}
+              addEntry={this.props.addEntry}
+              removeEntry={this.props.removeEntry}
+            />}
+        />
         <PrivateRoute
           path="/protected"
           entries={this.state.entries}

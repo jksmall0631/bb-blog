@@ -16,7 +16,9 @@ export default class EventsEdit extends Component {
       eventPhoto: "",
       title: "",
       date: "",
-      desc: ""
+      desc: "",
+      type: "",
+      expire: ""
     };
     this.savePhoto = this.savePhoto.bind(this);
   }
@@ -48,7 +50,7 @@ export default class EventsEdit extends Component {
   }
 
   render() {
-    const { eventPhoto, title, date, desc } = this.state;
+    const { eventPhoto, title, date, desc, type, expire } = this.state;
     return (
       <div>
         <div className="edit-blog">
@@ -72,9 +74,30 @@ export default class EventsEdit extends Component {
             placeholder="description"
             onChange={e => this.setState({ desc: e.target.value })}
           />
+          <p>Type:</p>
+          <select onChange={e => this.setState({ type: e.target.value })}>
+            <option value="readings">Readings</option>
+            <option value="workshops">Workshops</option>
+            <option value="speaking">Speaking</option>
+            <option value="classes">Classes</option>
+          </select>
+          <p>Expiration:</p>
+          <input
+            className="date"
+            type="date"
+            placeholder="expiration"
+            onChange={e => this.setState({ expire: e.target.value })}
+          />
           <button
             onClick={() =>
-              this.props.addEntry(eventPhoto, title, date, desc)}
+              this.props.addEntry(
+                eventPhoto,
+                title,
+                this.formatDate(),
+                desc,
+                type,
+                expire
+              )}
           >
             create event!
           </button>

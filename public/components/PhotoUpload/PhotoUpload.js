@@ -21,7 +21,7 @@ export default class PhotoUpload extends Component {
       return alert("No file  selected.");
     }
     fetch(
-      `https://secleere.herokuapp.com/api/v1/photo?file-name=${file.name}&file-type=${file.type}`,
+      `http://localhost:3000/api/v1/photo?file-name=${file.name}&file-type=${file.type}`,
       {
         method: "POST",
         body: form
@@ -29,6 +29,7 @@ export default class PhotoUpload extends Component {
     )
       .then(data => data.json())
       .then(data => {
+        console.log(data);
         this.setState({ loading: false, success: true });
         this.props.savePhoto(data.url);
       })

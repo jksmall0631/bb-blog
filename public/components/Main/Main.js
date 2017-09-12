@@ -3,29 +3,29 @@ import React from "react";
 import Nav from "../Nav/Nav";
 import Welcome from "../Welcome/Welcome";
 import About from "../About/About";
-import Blog from "../Blog/Blog";
 import Books from "../Books/Books";
 import Events from "../Events/Events";
-import Contact from "../Contact/Contact";
 import Subscribe from "../Subscribe/Subscribe";
 import Footer from "../Footer/Footer";
 
-const Main = () => {
+const Main = ({ entries, addEntry, removeEntry }) => {
   return (
     <div>
       <Nav />
       <div className="main-cont">
         <Welcome />
         <Books />
-        <Events />
-        {/* <Blog /> */}
+        <Events
+          entries={entries}
+          addEntry={addEntry}
+          removeEntry={removeEntry}
+        />
         <About />
-        {/* <Contact /> */}
         <Subscribe />
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Main;

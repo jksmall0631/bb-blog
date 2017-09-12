@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static("public"));
-app.use('/static', express.static(__dirname + '/public'));
+app.use("/static", express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -68,19 +68,19 @@ app.post("/api/v1/photo", upload.single("file"), (req, res) => {
   res.send(JSON.stringify({ url: req.file.location }));
 });
 
-app.post("/api/v1/blog", (req, res) => {
-  const { photo, title, date, content } = req.body;
-  const post = { photo, title, date, content };
-  database("posts")
+app.post("/api/v1/events", (req, res) => {
+  const { photo, title, date, desc, type, expire } = req.body;
+  const post = { photo, title, date, desc, type, expire };
+  database("events")
     .insert(post)
     .returning("*")
     .then(data => res.send(data))
     .catch(err => res.status(404).json(err));
 });
 
-app.delete("/api/v1/blog", (req, res) => {
+app.delete("/api/v1/events", (req, res) => {
   const { id } = req.body;
-  database("posts").where("id", id).select().del().then(count => {
+  database("events").where("id", id).select().del().then(count => {
     if (count === 0) {
       res.status(422).json({ "Response 422": "Unprocessable Entity" });
     } else {
@@ -89,8 +89,8 @@ app.delete("/api/v1/blog", (req, res) => {
   });
 });
 
-app.get("/api/v1/blog", (req, res) => {
-  database("posts")
+app.get("/api/v1/events", (req, res) => {
+  database("events")
     .select()
     .then(posts => res.status(200).json(posts))
     .catch(error => res.status(404).json(error));

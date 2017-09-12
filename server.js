@@ -55,7 +55,7 @@ let multerS3 = require("multer-s3");
 let upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "sec-blog",
+    bucket: "buddha-babies",
     region: "us-west-2",
     contentType: multerS3.AUTO_CONTENT_TYPE,
     key: (req, file, cb) => {

@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
-import BlogEdit from "../BlogEdit/BlogEdit";
+import EventsEdit from "../EventsEdit/EventsEdit";
 
 require("./Protected.css");
 

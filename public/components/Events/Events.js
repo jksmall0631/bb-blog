@@ -14,8 +14,7 @@ export default class Events extends Component {
             className="stack"
   	        height={500}
   	        width={500}
-  	        background='#f8f8f8'
-  	        hoverOffset={25}>
+  	        hoverOffset={15}>
             <Card background='#9b305a'>
   	          <h1>CLASSES</h1>
             </Card>

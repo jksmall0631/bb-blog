@@ -4,7 +4,7 @@ require("./Banner.css");
 
 const Banner = () => {
   return (
-    <div id="welcome" className="banner component">
+    <div className="banner component">
       <div className="logo-cont">
         <img className="logo" src="../../resources/BB.png" alt="Buddha Babies Logo"></img>
       </div>

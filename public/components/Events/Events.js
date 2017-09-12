@@ -8,18 +8,14 @@ export default class Events extends Component {
     return (
       <div id="events" className="component">
         <div className="events-cont">
-          <Link to="/classes">
-            <button className="event-button purple">CLASSES</button>
-          </Link>
-          <Link to="/readings">
-            <button className="event-button green">READINGS</button>
-          </Link>
-          <Link to="/workshops">
-            <button className="event-button brown">WORKSHOPS</button>
-          </Link>
-          <Link to="/speaking">
-            <button className="event-button orange">SPEAKING</button>
-          </Link>
+          <button className="event-button purple">CLASSES</button>
+          <div className="expand"></div>
+          <button className="event-button green">READINGS</button>
+          <div className="expand"></div>
+          <button className="event-button brown">WORKSHOPS</button>
+          <div className="expand"></div>
+          <button className="event-button orange">SPEAKING</button>
+          <div className="expand"></div>
         </div>
       </div>
     );

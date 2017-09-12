@@ -13,6 +13,7 @@ import Blog from "../Blog/Blog";
 import Books from "../Books/Books";
 import Events from "../Events/Events";
 import Contact from "../Contact/Contact";
+import Subscribe from "../Subscribe/Subscribe";
 import Footer from "../Footer/Footer";
 import AdminLogin from "../AdminLogin/AdminLogin";
 import Protected from "../Protected/Protected";
@@ -117,7 +118,8 @@ export default class App extends Component {
           <Events />
           {/* <Blog /> */}
           <About />
-          <Contact />
+          {/* <Contact /> */}
+          <Subscribe />
           <Footer />
         </div>
       </main>

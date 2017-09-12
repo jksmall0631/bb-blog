@@ -10,5 +10,13 @@
   <body>
     <div class="application"></div>
     <script src="main.bundle.js"></script>
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js"
+      data-dojo-config="usePlainJson: true, isDebug: false">
+    </script>
+    <script
+      type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"06520f7f93cadb45c1679cc5f","lid":"3144c815ae"}) })
+    </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     client: "pg",
-    connection: "postgres://localhost/bbblog",
+    connection: "postgres://localhost/buddha",
     migrations: {
       directory: "./db/migrations"
     },
@@ -13,7 +13,7 @@ module.exports = {
 
   staging: {
     client: "pg",
-    connection: "postgres://localhost/bbblogTest",
+    connection: "postgres://localhost/buddha",
     migrations: {
       directory: "./db/migrations"
     },

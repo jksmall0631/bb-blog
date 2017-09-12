@@ -40,8 +40,13 @@ export default class Nav extends Component {
             </a>
           </li>
           <li>
-            <a className="nav" href="#about">
-              . &nbsp;&nbsp; ABOUT &nbsp;&nbsp; .
+            <a className="nav" href="#books">
+              . &nbsp;&nbsp; BOOKS &nbsp;&nbsp; .
+            </a>
+          </li>
+          <li>
+            <a className="nav" href="#events">
+              . &nbsp;&nbsp; CLASSES &nbsp;&nbsp; .
             </a>
           </li>
           <li>
@@ -50,13 +55,8 @@ export default class Nav extends Component {
             </a>
           </li>
           <li>
-            <a className="nav" href="#books">
-              . &nbsp;&nbsp; BOOKS &nbsp;&nbsp; .
-            </a>
-          </li>
-          <li>
-            <a className="nav" href="#events">
-              . &nbsp;&nbsp; EVENTS &nbsp;&nbsp; .
+            <a className="nav" href="#about">
+              . &nbsp;&nbsp; ABOUT &nbsp;&nbsp; .
             </a>
           </li>
           <li>

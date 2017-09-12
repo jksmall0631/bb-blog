@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Card from "../Card/Card";
+import CardStack from "../CardStack/CardStack";
 
 require("./Events.css");
 
@@ -8,14 +10,25 @@ export default class Events extends Component {
     return (
       <div id="events" className="component">
         <div className="events-cont">
-          <button className="event-button purple">CLASSES</button>
-          <div className="expand"></div>
-          <button className="event-button green">READINGS</button>
-          <div className="expand"></div>
-          <button className="event-button brown">WORKSHOPS</button>
-          <div className="expand"></div>
-          <button className="event-button orange">SPEAKING</button>
-          <div className="expand"></div>
+          <CardStack
+            className="stack"
+  	        height={500}
+  	        width={500}
+  	        background='#f8f8f8'
+  	        hoverOffset={25}>
+            <Card background='#9b305a'>
+  	          <h1>CLASSES</h1>
+            </Card>
+            <Card background='#a3ad23'>
+  	          <h1>READINGS</h1>
+            </Card>
+            <Card background='#885621'>
+  	          <h1>WORKSHOPS</h1>
+            </Card>
+            <Card background='#e77b0a'>
+  	          <h1>SPEAKING</h1>
+            </Card>
+          </CardStack>
         </div>
       </div>
     );

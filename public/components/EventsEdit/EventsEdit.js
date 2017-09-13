@@ -17,7 +17,7 @@ export default class EventsEdit extends Component {
       title: "",
       date: "",
       desc: "",
-      type: "",
+      type: "classes",
       expire: ""
     };
     this.savePhoto = this.savePhoto.bind(this);
@@ -29,24 +29,24 @@ export default class EventsEdit extends Component {
 
   formatDate() {
     const string = [
-      "January",
-      "February",
-      "March",
-      "April",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
       "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec"
     ];
     let dateArray = this.state.date.split("-");
     const month = string[dateArray[1] - 1];
     const day = dateArray[2];
     const year = dateArray[0];
-    return month + " " + day + ", " + year;
+    return month + " " + day;
   }
 
   render() {
@@ -75,11 +75,11 @@ export default class EventsEdit extends Component {
             onChange={e => this.setState({ desc: e.target.value })}
           />
           <p>Type:</p>
-          <select onChange={e => this.setState({ type: e.target.value })}>
+          <select defaultValue="classes" onChange={e => this.setState({ type: e.target.value })}>
+            <option value="classes">Classes</option>
             <option value="readings">Readings</option>
             <option value="workshops">Workshops</option>
             <option value="speaking">Speaking</option>
-            <option value="classes">Classes</option>
           </select>
           <p>Expiration:</p>
           <input
@@ -102,10 +102,10 @@ export default class EventsEdit extends Component {
             create event!
           </button>
         </div>
-        <Events
+        {/* <Events
           entries={this.props.entries}
           removeEntry={this.props.removeEntry}
-        />
+        /> */}
       </div>
     );
   }

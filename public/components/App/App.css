@@ -20,12 +20,3 @@ body {
   padding-bottom: 50px;
   padding-top: 25px;
 }
-
-@media (max-width: 500px) {
-  html {
-    background: none;
-    background-position: center center;
-    background-size: auto auto;
-    background-attachment: fixed;
-  }
-}

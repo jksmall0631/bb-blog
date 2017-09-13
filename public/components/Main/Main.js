@@ -6,6 +6,7 @@ import About from "../About/About";
 import Books from "../Books/Books";
 import Events from "../Events/Events";
 import Subscribe from "../Subscribe/Subscribe";
+import Icons from "../Icons/Icons";
 import Footer from "../Footer/Footer";
 
 const Main = ({ entries, removeEntry }) => {
@@ -21,6 +22,7 @@ const Main = ({ entries, removeEntry }) => {
         />
         <About />
         <Subscribe />
+        <Icons />
         <Footer />
       </div>
     </div>

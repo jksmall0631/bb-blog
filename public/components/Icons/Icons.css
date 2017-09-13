@@ -1,0 +1,28 @@
+.icon-cont {
+  background-color: black;
+  padding: 40px;
+}
+
+.icon-color {
+  width: 40px;
+  height: 40px;
+  background-color: #a3ad23;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.icon {
+  width: 22px;
+  position: relative;
+  top: 9px;
+}
+
+.footer-nav {
+  font-size: 12px;
+  color: white;
+  margin: 10px;
+}
+
+.footer-nav:hover {
+  color: #a3ad23;
+}

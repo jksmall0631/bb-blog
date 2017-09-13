@@ -27,28 +27,6 @@ export default class EventsEdit extends Component {
     this.setState({ eventPhoto: photo });
   }
 
-  formatDate() {
-    const string = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sept",
-      "Oct",
-      "Nov",
-      "Dec"
-    ];
-    let dateArray = this.state.date.split("-");
-    const month = string[dateArray[1] - 1];
-    const day = dateArray[2];
-    const year = dateArray[0];
-    return month + " " + day;
-  }
-
   render() {
     const { eventPhoto, title, date, desc, type, expire } = this.state;
     return (
@@ -57,11 +35,9 @@ export default class EventsEdit extends Component {
           <h2 className="h2"> Edit Events</h2>
           <p>Upload Photo:</p>
           <PhotoUpload savePhoto={this.savePhoto} id="file-input" />
-          <p>Date:</p>
+          <p>Date/Day:</p>
           <input
-            className="date"
-            type="date"
-            placeholder="date"
+            placeholder="OCT 3 or MON"
             onChange={e => this.setState({ date: e.target.value })}
           />
           <p>Title:</p>
@@ -75,7 +51,10 @@ export default class EventsEdit extends Component {
             onChange={e => this.setState({ desc: e.target.value })}
           />
           <p>Type:</p>
-          <select defaultValue="classes" onChange={e => this.setState({ type: e.target.value })}>
+          <select
+            defaultValue="classes"
+            onChange={e => this.setState({ type: e.target.value })}
+          >
             <option value="classes">Classes</option>
             <option value="readings">Readings</option>
             <option value="workshops">Workshops</option>
@@ -90,22 +69,15 @@ export default class EventsEdit extends Component {
           />
           <button
             onClick={() =>
-              this.props.addEntry(
-                eventPhoto,
-                title,
-                this.formatDate(),
-                desc,
-                type,
-                expire
-              )}
+              this.props.addEntry(eventPhoto, title, date, desc, type, expire)}
           >
             create event!
           </button>
         </div>
-        {/* <Events
+        <Events
           entries={this.props.entries}
           removeEntry={this.props.removeEntry}
-        /> */}
+        />
       </div>
     );
   }

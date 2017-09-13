@@ -77,7 +77,7 @@ export default class App extends Component {
         }
         this.setState({ entries: array });
       })
-      .catch(err => alert(err));
+      .catch(err => console.log(err));
   }
 
   render() {

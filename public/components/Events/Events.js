@@ -6,15 +6,21 @@ import EventInfo from "../EventInfo/EventInfo";
 
 require("./Events.css");
 
+const initialState = {
+  classes: [],
+  readings: [],
+  workshops: [],
+  speaking: []
+};
+
 export default class Events extends Component {
   constructor() {
     super();
-    this.state = {
-      classes: [],
-      readings: [],
-      workshops: [],
-      speaking: []
-    };
+    this.state = initialState;
+  }
+
+  componentDidMount() {
+    this.sortEvents(this.props.entries);
   }
 
   componentWillReceiveProps(props) {
@@ -26,23 +32,30 @@ export default class Events extends Component {
 
     for (let i = 0, il = entries.length; i < il; i++) {
       if (entries[i].type === "classes") {
-        let newClasses = classes;
+        let newClasses = [];
         newClasses.push(entries[i]);
-        this.setState({ photos: newClasses });
-      } else if (entries[i].type === "readings") {
-        let newReadings = readings;
+        this.setState({ classes: newClasses });
+      }
+      else if (entries[i].type === "readings") {
+        let newReadings = [];
         newReadings.push(entries[i]);
-        this.setState({ photos: newReadings });
-      } else if (entries[i].type === "workshops") {
-        let newWorkshops = workshops;
+        this.setState({ readings: newReadings });
+      }
+      else if (entries[i].type === "workshops") {
+        let newWorkshops = [];
         newWorkshops.push(entries[i]);
-        this.setState({ photos: newWorkshops });
-      } else if (entries[i].type === "speaking") {
-        let newSpeaking = speaking;
+        this.setState({ workshops: newWorkshops });
+      }
+      else if (entries[i].type === "speaking") {
+        let newSpeaking = [];
         newSpeaking.push(entries[i]);
-        this.setState({ photos: newSpeaking });
+        this.setState({ speaking: newSpeaking });
       }
     }
+  }
+
+  clearState() {
+    this.setState(initialState);
   }
 
   render() {
@@ -57,19 +70,31 @@ export default class Events extends Component {
           >
             <Card background="#9b305a">
               <h1>CLASSES</h1>
-              <EventInfo events={this.state.classes} />
+              <EventInfo
+                events={this.state.classes}
+                removeEntry={this.props.removeEntry}
+              />
             </Card>
             <Card background="#a3ad23">
               <h1>READINGS</h1>
-              <EventInfo events={this.state.readings} />
+              <EventInfo
+                events={this.state.readings}
+                removeEntry={this.props.removeEntry}
+              />
             </Card>
             <Card background="#885621">
               <h1>WORKSHOPS</h1>
-              <EventInfo events={this.state.workshops} />
+              <EventInfo
+                events={this.state.workshops}
+                removeEntry={this.props.removeEntry}
+              />
             </Card>
             <Card background="#e77b0a">
               <h1>SPEAKING</h1>
-              <EventInfo events={this.state.speaking} />
+              <EventInfo
+                events={this.state.speaking}
+                removeEntry={this.props.removeEntry}
+              />
             </Card>
           </CardStack>
         </div>

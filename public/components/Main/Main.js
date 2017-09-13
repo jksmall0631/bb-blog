@@ -17,7 +17,7 @@ const Main = ({ entries, removeEntry }) => {
         <Books />
         <Events
           entries={entries}
-          removeEntry={removeEntry}
+          // removeEntry={removeEntry}
         />
         <About />
         <Subscribe />

@@ -1,7 +1,25 @@
 .subscribe {
   background-color: #a3ad23;
+  text-align: center;
+  padding: 50px 0;
 }
 
-.subscribe label {
-  padding: 20px;
+.subscribe input {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.subscribe button {
+  padding: 5px 15px;
+  background-color: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.subscribe button:hover {
+  background-color: grey;
 }

@@ -7,27 +7,27 @@ const Icons = () => {
     <div className="icon-cont">
       <ul>
         <li className="icon-color">
-          <a href="">
+          <a target='_blank' href="https://www.instagram.com/buddhababiesbooks/">
             <img className="icon" src="../../resources/instagram.png" />
           </a>
         </li>
         <li className="icon-color">
-          <a href="">
+          <a target='_blank' href="https://www.facebook.com/Buddha-Babies-Books-270057940161301/">
             <img className="icon" src="../../resources/facebook.png" />
           </a>
         </li>
         <li className="icon-color">
-          <a href="">
+          <a target='_blank' href="">
             <img className="icon" src="../../resources/linkedin.png" />
           </a>
         </li>
         <li className="icon-color">
-          <a href="">
+          <a target='_blank' href="">
             <img className="icon" src="../../resources/pinterest.png" />
           </a>
         </li>
         <li className="icon-color">
-          <a href="">
+          <a target='_blank' href="">
             <img className="icon" src="../../resources/twitter.png" />
           </a>
         </li>

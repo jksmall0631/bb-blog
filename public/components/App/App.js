@@ -29,7 +29,7 @@ export default class App extends Component {
   }
 
   eventEntries() {
-    const url = "http://localhost:3000/api/v1/events";
+    const url = "https://buddha-babies.herokuapp.com/api/v1/events";
     fetch(url, {
       method: "GET",
       headers: {
@@ -45,7 +45,7 @@ export default class App extends Component {
   }
 
   addEntry(photo, title, date, desc, type, expire) {
-    const url = "http://localhost:3000/api/v1/events";
+    const url = "https://buddha-babies.herokuapp.com/api/v1/events";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -61,7 +61,7 @@ export default class App extends Component {
   }
 
   removeEntry(id) {
-    const url = "http://localhost:3000/api/v1/events";
+    const url = "https://buddha-babies.herokuapp.com/api/v1/events";
     fetch(url, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },

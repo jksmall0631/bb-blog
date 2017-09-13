@@ -43,7 +43,7 @@
   margin-bottom: 5px;
 }
 
-.info-desc p {
+.info-desc pre {
   font-size: 12px;
   line-height: 16px;
 }

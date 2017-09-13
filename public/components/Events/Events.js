@@ -29,25 +29,25 @@ export default class Events extends Component {
 
   sortEvents(entries) {
     let { classes, readings, workshops, speaking } = this.state;
+    let newClasses = [];
+    let newReadings = [];
+    let newWorkshops = [];
+    let newSpeaking = [];
 
     for (let i = 0, il = entries.length; i < il; i++) {
       if (entries[i].type === "classes") {
-        let newClasses = [];
         newClasses.push(entries[i]);
         this.setState({ classes: newClasses });
       }
       else if (entries[i].type === "readings") {
-        let newReadings = [];
         newReadings.push(entries[i]);
         this.setState({ readings: newReadings });
       }
       else if (entries[i].type === "workshops") {
-        let newWorkshops = [];
         newWorkshops.push(entries[i]);
         this.setState({ workshops: newWorkshops });
       }
       else if (entries[i].type === "speaking") {
-        let newSpeaking = [];
         newSpeaking.push(entries[i]);
         this.setState({ speaking: newSpeaking });
       }

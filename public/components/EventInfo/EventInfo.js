@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 require("./EventInfo.css");
 
 const EventInfo = ({ events, removeEntry, location }) => {
+  console.log(events)
   let formattedEvents = "Coming Soon";
   if(events.length > 0) {
     formattedEvents = events.map(event => {
@@ -19,9 +20,9 @@ const EventInfo = ({ events, removeEntry, location }) => {
             <h2>
               {event.title}
             </h2>
-            <p>
+            <pre>
               {event.desc}
-            </p>
+            </pre>
           </div>
           {location.pathname === "/protected"
           ? <button
@@ -38,7 +39,7 @@ const EventInfo = ({ events, removeEntry, location }) => {
         );
       });
   }
-  
+
   return (
     <ul className="info-cont">
       {formattedEvents}

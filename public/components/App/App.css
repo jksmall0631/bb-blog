@@ -3,20 +3,11 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: auto 100%;
 }
-
-/*@font-face {
-  font-family: 'funkydori';
-  src: url("../../resources/Funkydori.ttf");
-  src: url("../../resources/Funkydori.ttf") format('truetype'),
-       url("../../resources/Funkydori.otf") format('opentype');
-  font-style: normal;
-}*/
 
 body {
   font-family: 'Lato', sans-serif;
-  /*font-family: 'funkydori', sans-serif;*/
 }
 
 .main-cont {

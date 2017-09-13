@@ -48,3 +48,9 @@
     text-align: left;
   }
 }
+
+@media (max-width: 500px) {
+  .about-img {
+    max-width: 250px;
+  }
+}

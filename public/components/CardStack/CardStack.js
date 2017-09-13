@@ -65,7 +65,7 @@ class CardStack extends React.Component {
       ...styles,
       background: this.props.background,
       height: this.props.height,
-      width: this.props.width
+      maxWidth: this.props.width
     };
     return (
       <ul style={stackStyles}>

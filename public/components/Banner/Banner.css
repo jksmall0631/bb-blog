@@ -35,14 +35,22 @@
 }
 
 @media (max-width: 950px) {
-  .name {
-    font-size: 100px;
+  .title {
+    width: 500px;
   }
 }
 
 @media (max-width: 580px) {
-  .name {
-    font-size: 45px;
+  .logo-cont {
+    max-width: 270px;
+    height: 250px;
+  }
+  .logo {
+    max-width: 250px;
+    margin-top: 10px;
+  }
+  .title {
+    width: 300px;
   }
   .motto {
     font-size: 18px;

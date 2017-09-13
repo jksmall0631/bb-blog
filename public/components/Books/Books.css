@@ -23,3 +23,15 @@
   line-height: 20px;
   color: #fffbce;
 }
+
+@media (max-width: 825px) {
+  .book-img {
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-img {
+    max-width: 250px;
+  }
+}

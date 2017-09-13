@@ -36,3 +36,15 @@
   vertical-align: middle;
   padding-left: 20px;
 }
+
+@media (max-width: 825px) {
+  .about-card {
+    display: inherit;
+    text-align: center;
+  }
+
+  .about-txt {
+    width: 100%;
+    text-align: left;
+  }
+}

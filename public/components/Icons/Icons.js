@@ -17,17 +17,17 @@ const Icons = () => {
           </a>
         </li>
         <li className="icon-color">
-          <a target='_blank' href="">
+          <a target='_blank' href="https://www.linkedin.com/in/sharon-cleere-626704ba/">
             <img className="icon" src="../../resources/linkedin.png" />
           </a>
         </li>
         <li className="icon-color">
-          <a target='_blank' href="">
+          <a target='_blank' href="https://www.pinterest.com/buddhababiesbooks/pins/">
             <img className="icon" src="../../resources/pinterest.png" />
           </a>
         </li>
         <li className="icon-color">
-          <a target='_blank' href="">
+          <a target='_blank' href="https://twitter.com/buddhababybook">
             <img className="icon" src="../../resources/twitter.png" />
           </a>
         </li>

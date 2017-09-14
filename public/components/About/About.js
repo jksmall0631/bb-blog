@@ -15,22 +15,11 @@ export default class About extends Component {
             <h2>Sharon Cleere</h2>
             <h3>Author and Founder</h3>
             <p>
-              Sharon Cleere is a writer, philosopher, meditation guide and yoga
-              instructor. Sharon's goal in all of her endeavors is to encourage
-              others to explore and discover their own perspectives and develop
-              their inner peace. She loves to write for and teach children
-              because she believes showing the youth ways to cultivate inner
-              peace will develop a more kinder society.
-              <br />
-              <br />
-              She received her meditation and yoga instructor's certification in
-              India where she spent time immersed in the topics of meditation,
-              yoga, philosophy, Taoism, Hinduism and mindfulness. She has two
-              bachelor's degrees: one in communication and the other in
-              philosophy. Sharon's educational background trained her to make
-              seemingly complex topics easy to understand. Her writing, guided
-              meditation and yoga classes meet at the intersection of deep
-              philosophical topics and light-hearted play.
+              Sharon's goal in all of her endeavors is to inspire others to
+              explore and discover their own perspectives and develop their
+              inner peace. Her writing, guided meditation and yoga classes meet
+              at the intersection of deep philosophical topics and light-hearted
+              play.
             </p>
           </div>
         </div>
@@ -77,8 +66,8 @@ export default class About extends Component {
             <h2>Jeremy Duran</h2>
             <h3>Graphic Designer</h3>
             <p>
-              Jeremy Duran is a professional graphic designer and artist. When he
-              isn't doing artsy fartsy things (which is rare) he can be found
+              Jeremy Duran is a professional graphic designer and artist. When
+              he isn't doing artsy fartsy things (which is rare) he can be found
               causing mayhem in the city or being your local barista.
             </p>
           </div>

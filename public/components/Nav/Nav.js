@@ -30,7 +30,7 @@ export default class Nav extends Component {
     let nav = document.querySelector(".nav-cont");
     if (nav.style.bottom === "0px") {
       nav.style.bottom = "150px";
-      navBar.style.height = "25px";
+      navBar.style.height = "20px";
       this.setState({ collapsed: true });
     } else {
       nav.style.bottom = "0px";
@@ -52,7 +52,7 @@ export default class Nav extends Component {
     } else {
       this.setState({ showNavBtn: false });
       this.setState({ collapsed: true });
-      document.querySelector(".nav-bar").style.height = "25px";
+      document.querySelector(".nav-bar").style.height = "20px";
       document.querySelector(".nav-cont").style.bottom = "150px";
       window.addEventListener("scroll", this.collapseNav);
     }

@@ -4,6 +4,7 @@ nav {
   position: fixed;
   padding: 25px 0;
   background-color: rgba(40, 64, 26, 0.7);
+  z-index: 100;
 }
 
 ol, ul {
@@ -13,6 +14,22 @@ ol, ul {
 
 li {
   display: inline-block;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 30px;
+  z-index: 200;
+}
+
+.menu-btn img {
+  width: 25px;
+}
+
+.nav-bar {
+  transition: all ease-out 0.5s;
 }
 
 .nav-cont {
@@ -32,4 +49,19 @@ li {
 .nav:hover {
   letter-spacing: 1px;
   font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    height: 25px;
+  }
+
+  li {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .nav-cont {
+    position: relative;
+  }
 }

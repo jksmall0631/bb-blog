@@ -29,7 +29,6 @@ export default class PhotoUpload extends Component {
     )
       .then(data => data.json())
       .then(data => {
-        console.log(data);
         this.setState({ loading: false, success: true });
         this.props.savePhoto(data.url);
       })

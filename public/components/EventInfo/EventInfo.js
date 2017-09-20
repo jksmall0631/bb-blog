@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 require("./EventInfo.css");
 
 const EventInfo = ({ events, removeEntry, location }) => {
-  console.log(events)
   let formattedEvents = "Coming Soon";
   if(events.length > 0) {
     formattedEvents = events.map(event => {

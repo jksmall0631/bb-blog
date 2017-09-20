@@ -31,7 +31,7 @@ const formProps = {
 
 const Subscribe = () => {
   return (
-    <div className="subscribe">
+    <div id="subscribe" className="subscribe">
       <label>
         Stay tuned for updates, book releases, and more!
       </label>

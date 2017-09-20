@@ -49,11 +49,6 @@ const Icons = () => {
           </a>
         </li>
         <li>
-          <a className="footer-nav" href="#blog">
-            BLOG
-          </a>
-        </li>
-        <li>
           <a className="footer-nav" href="#about">
             ABOUT
           </a>
@@ -64,7 +59,7 @@ const Icons = () => {
           </a>
         </li>
         <li>
-          <a className="footer-nav" href="#contact">
+          <a className="footer-nav" href="#subscribe">
             CONTACT
           </a>
         </li>

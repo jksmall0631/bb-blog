@@ -5,7 +5,7 @@ require("./Contact.css");
 export default class Contact extends Component {
   render() {
     return(
-      <section id="contact" className="contact component">
+      <section id="social" className="contact-cont component">
         <h1>Contact</h1>
         <p>Here's how hold to get a hold of me:</p>
         <form action="https://formspree.io/drjosephliu@gmail.com" method="POST" id="contact-form" className="form-horizontal">

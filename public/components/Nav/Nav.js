@@ -77,11 +77,6 @@ export default class Nav extends Component {
           : null}
         <div className="nav-cont" style={{ bottom: "150px" }}>
           <ul>
-            {/* <li>
-            <a className="nav" href="#welcome">
-              . &nbsp;&nbsp; WELCOME &nbsp;&nbsp; .
-            </a>
-          </li> */}
             <li>
               <a className="nav" href="#books">
                 . &nbsp;&nbsp; BOOKS &nbsp;&nbsp; .
@@ -92,11 +87,6 @@ export default class Nav extends Component {
                 . &nbsp;&nbsp; CLASSES &nbsp;&nbsp; .
               </a>
             </li>
-            {/* <li>
-            <a className="nav" href="#blog">
-              . &nbsp;&nbsp; BLOG &nbsp;&nbsp; .
-            </a>
-          </li> */}
             <li>
               <a className="nav" href="#about">
                 . &nbsp;&nbsp; ABOUT &nbsp;&nbsp; .
@@ -108,7 +98,7 @@ export default class Nav extends Component {
               </a>
             </li>
             <li>
-              <a className="nav" href="#contact">
+              <a className="nav" href="#subscribe">
                 . &nbsp;&nbsp; CONTACT &nbsp;&nbsp; .
               </a>
             </li>

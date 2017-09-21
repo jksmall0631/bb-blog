@@ -2,6 +2,15 @@
   padding-top: 50px;
 }
 
+.events-cont h1 {
+  padding-bottom: 65px;
+}
+
+.class-list {
+  font-size: 18px;
+  display: block;
+}
+
 .event-button {
   color: white;
   font-size: 22px;

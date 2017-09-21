@@ -38,16 +38,13 @@ export default class Events extends Component {
       if (entries[i].type === "classes") {
         newClasses.push(entries[i]);
         this.setState({ classes: newClasses });
-      }
-      else if (entries[i].type === "readings") {
+      } else if (entries[i].type === "readings") {
         newReadings.push(entries[i]);
         this.setState({ readings: newReadings });
-      }
-      else if (entries[i].type === "workshops") {
+      } else if (entries[i].type === "workshops") {
         newWorkshops.push(entries[i]);
         this.setState({ workshops: newWorkshops });
-      }
-      else if (entries[i].type === "speaking") {
+      } else if (entries[i].type === "speaking") {
         newSpeaking.push(entries[i]);
         this.setState({ speaking: newSpeaking });
       }
@@ -70,6 +67,21 @@ export default class Events extends Component {
           >
             <Card background="#9b305a">
               <h1>CLASSES</h1>
+              <ul>
+                <li className="class-list">
+                  <span>For group classes book </span>
+                  <a
+                    href="http://thelotusmeditation.com/schedule/"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                </li>
+                <li className="class-list">
+                  <span>For private sessions book </span>
+                  <a href="#calendar">here</a>
+                </li>
+              </ul>
               <EventInfo
                 events={this.state.classes}
                 removeEntry={this.props.removeEntry}

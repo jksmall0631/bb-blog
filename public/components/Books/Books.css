@@ -1,6 +1,8 @@
 .book-cont {
   margin: auto;
   background-color: rgb(155, 48, 90);
+  width: 90%;
+  border-radius: 15px;
 }
 
 .book-img {

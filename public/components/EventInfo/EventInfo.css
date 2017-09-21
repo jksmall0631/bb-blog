@@ -1,11 +1,11 @@
 .info-cont {
-  margin-top: 65px;
+  margin-top: 10px;
   text-align: left;
   padding: 0 20px;
   font-size: 18px;
   color: black;
   overflow: scroll;
-  height: 360px;
+  height: 340px;
 }
 
 .info-card {
@@ -17,14 +17,14 @@
 }
 
 .info-date {
-  background-color: rgb(155, 48, 90);
+  background-color: #a3ad23;
   display: inline-block;
   width: 100px;
   height: 100px;
   color: white;
   font-size: 48px;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
 }
 
 .info-img {

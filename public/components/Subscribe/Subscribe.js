@@ -32,12 +32,10 @@ const formProps = {
 const Subscribe = () => {
   return (
     <div id="subscribe" className="subscribe">
-      <label>
-        Stay tuned for updates, book releases, and more!
-      </label>
+      <label>Stay tuned for updates, book releases, and more!</label>
       <SubscribeFrom {...formProps} />
     </div>
-  )
-}
+  );
+};
 
 export default Subscribe;

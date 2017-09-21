@@ -10,7 +10,7 @@ const Banner = () => {
       </div>
       {/* <h1 className="title">Buddha Babies Books</h1> */}
       <img className="title" src="../../resources/title.png" alt="Buddha Babies Title"></img>
-      <h2 className="motto">CHILDREN'S BOOKS THAT FACILITATE AN UNDERSTANDING OF MEDITATION, YOGA, AND PHILOSOPHY</h2>
+      <h2 className="motto">- BOOKS - MEDITATION - YOGA -</h2>
     </div>
   );
 };

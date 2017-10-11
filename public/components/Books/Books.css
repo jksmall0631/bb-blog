@@ -1,12 +1,13 @@
 .book-cont {
   margin: auto;
-  background-color: rgb(155, 48, 90);
+  background-color: #aec9ab;
   width: 90%;
   border-radius: 15px;
+  margin-bottom: 85px;
 }
 
 .book-img {
-  max-width: 350px;
+  max-width: 325px;
   align-self: flex-start;
   padding-right: 30px;
 }
@@ -14,7 +15,7 @@
 .book-title {
   max-width: 800px;
   text-align: center;
-  margin: 40px 0 20px;
+  margin-bottom: 20px;
   font-size: 30px;
   color: white;
 }
@@ -23,7 +24,7 @@
   max-width: 800px;
   font-weight: 400;
   line-height: 20px;
-  color: #fffbce;
+  color: white;
 }
 
 @media (max-width: 825px) {
@@ -35,5 +36,9 @@
 @media (max-width: 500px) {
   .book-img {
     max-width: 250px;
+  }
+
+  .book-title {
+    margin-top: 40px;
   }
 }

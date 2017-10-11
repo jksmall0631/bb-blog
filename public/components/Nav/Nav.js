@@ -88,18 +88,18 @@ export default class Nav extends Component {
               </a>
             </li>
             <li>
+              <a className="nav" href="#schedule">
+                . &nbsp;&nbsp; SCHEDULE &nbsp;&nbsp; .
+              </a>
+            </li>
+            <li>
               <a className="nav" href="#about">
-                . &nbsp;&nbsp; ABOUT &nbsp;&nbsp; .
+                . &nbsp;&nbsp; TEAM &nbsp;&nbsp; .
               </a>
             </li>
             <li>
               <a className="nav" href="#subscribe">
                 . &nbsp;&nbsp; SUBSCRIBE &nbsp;&nbsp; .
-              </a>
-            </li>
-            <li>
-              <a className="nav" href="#subscribe">
-                . &nbsp;&nbsp; CONTACT &nbsp;&nbsp; .
               </a>
             </li>
           </ul>

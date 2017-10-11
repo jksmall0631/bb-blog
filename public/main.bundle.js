@@ -26086,8 +26086,17 @@
 	              null,
 	              _react2.default.createElement(
 	                "a",
+	                { className: "nav", href: "#schedule" },
+	                ". \xA0\xA0 SCHEDULE \xA0\xA0 ."
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "li",
+	              null,
+	              _react2.default.createElement(
+	                "a",
 	                { className: "nav", href: "#about" },
-	                ". \xA0\xA0 ABOUT \xA0\xA0 ."
+	                ". \xA0\xA0 TEAM \xA0\xA0 ."
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -26097,15 +26106,6 @@
 	                "a",
 	                { className: "nav", href: "#subscribe" },
 	                ". \xA0\xA0 SUBSCRIBE \xA0\xA0 ."
-	              )
-	            ),
-	            _react2.default.createElement(
-	              "li",
-	              null,
-	              _react2.default.createElement(
-	                "a",
-	                { className: "nav", href: "#subscribe" },
-	                ". \xA0\xA0 CONTACT \xA0\xA0 ."
 	              )
 	            )
 	          )
@@ -26782,7 +26782,7 @@
 	    _react2.default.createElement(
 	      "h2",
 	      { className: "motto" },
-	      "- BOOKS - MEDITATION - YOGA -"
+	      "- MEDITATION - YOGA - INSPIRATION -"
 	    )
 	  );
 	};
@@ -27032,7 +27032,7 @@
 
 
 	// module
-	exports.push([module.id, ".about-cont {\n  background-color: rgba(255, 255, 255, 0.9);\n}\n\n.about-cont h2 {\n  font-size: 30px;\n}\n\n.about-cont h3 {\n  font-size: 15px;\n  margin-bottom: 10px;\n}\n\n.about-cont p {\n  line-height: 20px;\n}\n\n.about-card {\n  margin: auto;\n  width: 80%;\n  padding: 20px;\n  display: flex;\n  padding-top: 40px;\n}\n\n.about-img {\n  max-width: 400px;\n  border-radius: 50%;\n  align-self: flex-start;\n}\n\n.about-txt {\n  display: inline-block;\n  width: 48%;\n  height: 100%;\n  vertical-align: middle;\n  padding-left: 20px;\n}\n\n@media (max-width: 825px) {\n  .about-card {\n    display: inherit;\n    text-align: center;\n  }\n\n  .about-txt {\n    width: 100%;\n    text-align: left;\n  }\n}\n\n@media (max-width: 500px) {\n  .about-img {\n    max-width: 250px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".about-cont {\n  background-color: rgba(255, 255, 255, 0.9);\n  margin-top: 10px;\n}\n\n.about-cont h2 {\n  font-size: 30px;\n}\n\n.about-cont h3 {\n  font-size: 15px;\n  margin-bottom: 10px;\n}\n\n.about-cont p {\n  line-height: 20px;\n}\n\n.about-card {\n  margin: auto;\n  width: 80%;\n  padding: 20px;\n  display: flex;\n  padding-top: 40px;\n}\n\n.about-img {\n  max-width: 400px;\n  border-radius: 50%;\n  align-self: flex-start;\n}\n\n.about-txt {\n  display: inline-block;\n  width: 48%;\n  height: 100%;\n  vertical-align: middle;\n  padding-left: 20px;\n}\n\n@media (max-width: 825px) {\n  .about-card {\n    display: inherit;\n    text-align: center;\n  }\n\n  .about-txt {\n    width: 100%;\n    text-align: left;\n  }\n}\n\n@media (max-width: 500px) {\n  .about-img {\n    max-width: 250px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -27083,7 +27083,7 @@
 	        _react2.default.createElement(
 	          "div",
 	          { className: "about-card" },
-	          _react2.default.createElement("img", { className: "book-img", src: "../../resources/coming-soon2.png" }),
+	          _react2.default.createElement("img", { className: "book-img", src: "../../resources/cover.png" }),
 	          _react2.default.createElement(
 	            "div",
 	            { className: "about-text" },
@@ -27148,7 +27148,7 @@
 
 
 	// module
-	exports.push([module.id, ".book-cont {\n  margin: auto;\n  background-color: rgb(155, 48, 90);\n  width: 90%;\n  border-radius: 15px;\n}\n\n.book-img {\n  max-width: 350px;\n  align-self: flex-start;\n  padding-right: 30px;\n}\n\n.book-title {\n  max-width: 800px;\n  text-align: center;\n  margin: 40px 0 20px;\n  font-size: 30px;\n  color: white;\n}\n\n.book-desc {\n  max-width: 800px;\n  font-weight: 400;\n  line-height: 20px;\n  color: #fffbce;\n}\n\n@media (max-width: 825px) {\n  .book-img {\n    padding: 0;\n  }\n}\n\n@media (max-width: 500px) {\n  .book-img {\n    max-width: 250px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".book-cont {\n  margin: auto;\n  background-color: #aec9ab;\n  width: 90%;\n  border-radius: 15px;\n  margin-bottom: 85px;\n}\n\n.book-img {\n  max-width: 325px;\n  align-self: flex-start;\n  padding-right: 30px;\n}\n\n.book-title {\n  max-width: 800px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 30px;\n  color: white;\n}\n\n.book-desc {\n  max-width: 800px;\n  font-weight: 400;\n  line-height: 20px;\n  color: white;\n}\n\n@media (max-width: 825px) {\n  .book-img {\n    padding: 0;\n  }\n}\n\n@media (max-width: 500px) {\n  .book-img {\n    max-width: 250px;\n  }\n\n  .book-title {\n    margin-top: 40px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -27276,7 +27276,7 @@
 	            },
 	            _react2.default.createElement(
 	              _Card2.default,
-	              { background: "#aec9ab" },
+	              { background: "#6da7a0" },
 	              _react2.default.createElement(
 	                "h1",
 	                null,
@@ -27337,7 +27337,7 @@
 	            ),
 	            _react2.default.createElement(
 	              _Card2.default,
-	              { background: "#6da7a0" },
+	              { background: "#aec9ab" },
 	              _react2.default.createElement(
 	                "h1",
 	                null,
@@ -27785,7 +27785,7 @@
 
 
 	// module
-	exports.push([module.id, ".events-cont {\n  padding-top: 50px;\n}\n\n.events-cont h1 {\n  padding-bottom: 65px;\n}\n\n.class-list {\n  font-size: 18px;\n  display: block;\n}\n\n.event-button {\n  color: white;\n  font-size: 22px;\n  width: 500px;\n  display: block;\n  border: none;\n  height: 100px;\n  background-color: white;\n  border-radius: 4px;\n  margin: 0 auto 20px;\n  transition: all .2s ease-in-out;\n}\n\n.purple {\n  background-color: #9b305a;\n}\n\n.green {\n  background-color: #a3ad23;\n}\n\n.brown {\n  background-color: #885621;\n}\n\n.orange {\n  background-color: #e77b0a;\n}\n\n.event-button:hover {\n  transform: scale(1.05)\n}\n\na {\n  text-decoration: none;\n}\n", ""]);
+	exports.push([module.id, ".events-cont {\n  padding-top: 50px;\n  margin-bottom: 100px;\n}\n\n.events-cont h1 {\n  padding-bottom: 65px;\n}\n\n.class-list {\n  font-size: 18px;\n  display: block;\n}\n\n.event-button {\n  color: white;\n  font-size: 22px;\n  width: 500px;\n  display: block;\n  border: none;\n  height: 100px;\n  background-color: white;\n  border-radius: 4px;\n  margin: 0 auto 20px;\n  transition: all .2s ease-in-out;\n}\n\n.purple {\n  background-color: #9b305a;\n}\n\n.green {\n  background-color: #a3ad23;\n}\n\n.brown {\n  background-color: #885621;\n}\n\n.orange {\n  background-color: #e77b0a;\n}\n\n.event-button:hover {\n  transform: scale(1.05)\n}\n\na {\n  text-decoration: none;\n}\n", ""]);
 
 	// exports
 
@@ -28746,10 +28746,10 @@
 
 	var Calendar = function Calendar() {
 	  return _react2.default.createElement("div", {
-	    id: "calendar",
+	    id: "schedule",
 	    className: "calendly-inline-widget",
 	    "data-url": "https://calendly.com/buddhababies",
-	    style: { minWidth: "320px", height: "700px" }
+	    style: { minWidth: "320px", height: "950px" }
 	  });
 	};
 

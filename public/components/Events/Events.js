@@ -65,7 +65,7 @@ export default class Events extends Component {
             width={500}
             hoverOffset={15}
           >
-            <Card background="#aec9ab">
+            <Card background="#6da7a0">
               <h1>CLASSES</h1>
               <ul>
                 <li className="class-list">
@@ -94,7 +94,7 @@ export default class Events extends Component {
                 removeEntry={this.props.removeEntry}
               />
             </Card>
-            <Card background="#6da7a0">
+            <Card background="#aec9ab">
               <h1>WORKSHOPS</h1>
               <EventInfo
                 events={this.state.workshops}

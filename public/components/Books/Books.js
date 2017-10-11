@@ -13,7 +13,7 @@ class Books extends Component {
     return (
       <div id="books" className="book-cont component">
         <div className="about-card">
-          <img className="book-img" src="../../resources/coming-soon2.png" />
+          <img className="book-img" src="../../resources/cover.png" />
           <div className="about-text">
             <h2 className="book-title">Namaste, Rainbow</h2>
             <p className="book-desc">

@@ -1,5 +1,5 @@
 html {
-  background: url(../../resources/BB-background-large.png) no-repeat center center fixed;
+  background: url(../../resources/eucalyptus-bg.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,8 +21,8 @@ body {
   padding-top: 25px;
 }
 
-@media (max-width: 720px) {
+/*@media (max-width: 720px) {
   html {
-    background: url(../../resources/BB-background-small.png) no-repeat fixed;
+    background: url(../../resources/BB-background-small.jpg) no-repeat fixed;
   }
-}
+}*/

@@ -25986,8 +25986,7 @@
 	  _createClass(Nav, [{
 	    key: "collapseNav",
 	    value: function collapseNav(event) {
-	      var scrollTop = event.srcElement.body.scrollTop,
-	          itemTranslate = Math.min(0, scrollTop / 3 - 60);
+	      var scrollTop = window.scrollY;
 	      var collapseNav = document.querySelector(".nav-bar");
 	      if (scrollTop > 85) {
 	        collapseNav.style.transform = "translate(0px, -70px)";
@@ -26002,12 +26001,14 @@
 	      var navBar = document.querySelector(".nav-bar");
 	      var nav = document.querySelector(".nav-cont");
 	      if (nav.style.bottom === "0px") {
-	        nav.style.bottom = "150px";
+	        nav.style.bottom = "175px";
+	        nav.style.visibility = "hidden";
 	        navBar.style.height = "20px";
 	        this.setState({ collapsed: true });
 	      } else {
 	        nav.style.bottom = "0px";
-	        navBar.style.height = "120px";
+	        nav.style.visibility = "visible";
+	        navBar.style.height = "140px";
 	        this.setState({ collapsed: false });
 	      }
 	    }
@@ -26024,13 +26025,14 @@
 	  }, {
 	    key: "checkWidth",
 	    value: function checkWidth() {
-	      if (window.innerWidth < 700) {
+	      if (window.innerWidth < 771) {
 	        this.setState({ showNavBtn: true });
 	      } else {
 	        this.setState({ showNavBtn: false });
 	        this.setState({ collapsed: true });
 	        document.querySelector(".nav-bar").style.height = "20px";
-	        document.querySelector(".nav-cont").style.bottom = "150px";
+	        document.querySelector(".nav-cont").style.bottom = "175px";
+	        document.querySelector(".nav-cont").style.visibility = "visible";
 	        window.addEventListener("scroll", this.collapseNav);
 	      }
 	    }
@@ -26059,7 +26061,7 @@
 	        ) : null,
 	        _react2.default.createElement(
 	          "div",
-	          { className: "nav-cont", style: { bottom: "150px" } },
+	          { className: "nav-cont", style: { bottom: "175px", visibility: "hidden" } },
 	          _react2.default.createElement(
 	            "ul",
 	            null,
@@ -26106,6 +26108,19 @@
 	                "a",
 	                { className: "nav", href: "#subscribe" },
 	                ". \xA0\xA0 SUBSCRIBE \xA0\xA0 ."
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "li",
+	              null,
+	              _react2.default.createElement(
+	                "a",
+	                {
+	                  className: "nav",
+	                  href: "https://medium.com/buddhababiesbooks",
+	                  target: "_blank"
+	                },
+	                ". \xA0\xA0 BLOG \xA0\xA0 ."
 	              )
 	            )
 	          )
@@ -26159,7 +26174,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  width: 100%;\n  text-align: center;\n  position: fixed;\n  padding: 25px 0;\n  background-color: rgba(40, 64, 26, 0.7);\n  z-index: 100;\n}\n\nol, ul {\n  padding-left: 0;\n  text-align: center;\n}\n\nli {\n  display: inline-block;\n}\n\n.menu-btn {\n  background: none;\n  border: none;\n  position: absolute;\n  right: 30px;\n  top: 20px;\n  z-index: 200;\n}\n\n.menu-btn img {\n  width: 25px;\n}\n\n.nav-bar {\n  transition: all ease-out 0.5s;\n}\n\n.nav-cont {\n  transition: all ease-out 0.5s;\n  z-index: 100;\n}\n\n.nav {\n  color: white;\n  text-decoration: none;\n  font-weight: 300;\n  margin: 0 20px;\n  font-size: 15px;\n  transition: all .5s ease-in;\n}\n\n.nav:hover {\n  letter-spacing: 1px;\n  font-size: 16px;\n}\n\n@media (max-width: 700px) {\n  nav {\n    height: 25px;\n  }\n\n  nav li {\n    display: block;\n    padding-bottom: 10px;\n  }\n\n  .nav-cont {\n    position: relative;\n  }\n}\n", ""]);
+	exports.push([module.id, "nav {\n  width: 100%;\n  text-align: center;\n  position: fixed;\n  padding: 25px 0;\n  background-color: white;\n  z-index: 100;\n}\n\nol, ul {\n  padding-left: 0;\n  text-align: center;\n}\n\nli {\n  display: inline-block;\n}\n\n.menu-btn {\n  background: none;\n  border: none;\n  position: absolute;\n  right: 30px;\n  top: 20px;\n  z-index: 200;\n}\n\n.menu-btn img {\n  width: 25px;\n}\n\n.nav-bar {\n  transition: all ease-out 0.5s;\n}\n\n.nav-cont {\n  transition: all ease-out 0.5s;\n  z-index: 100;\n}\n\n.nav {\n  color: grey;\n  text-decoration: none;\n  font-weight: 300;\n  margin: 0 20px;\n  font-size: 15px;\n  transition: all .5s ease-in;\n}\n\n.nav:hover {\n  letter-spacing: 1px;\n  font-size: 16px;\n}\n\n@media (max-width: 770px) {\n  nav {\n    height: 25px;\n  }\n\n  nav li {\n    display: block;\n    padding-bottom: 10px;\n  }\n\n  .nav-cont {\n    position: relative;\n  }\n}\n", ""]);
 
 	// exports
 

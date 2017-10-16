@@ -14,8 +14,7 @@ export default class Nav extends Component {
   }
 
   collapseNav(event) {
-    let scrollTop = event.srcElement.body.scrollTop,
-      itemTranslate = Math.min(0, scrollTop / 3 - 60);
+    let scrollTop = window.scrollY;
     let collapseNav = document.querySelector(".nav-bar");
     if (scrollTop > 85) {
       collapseNav.style.transform = "translate(0px, -70px)";
@@ -29,12 +28,14 @@ export default class Nav extends Component {
     let navBar = document.querySelector(".nav-bar");
     let nav = document.querySelector(".nav-cont");
     if (nav.style.bottom === "0px") {
-      nav.style.bottom = "150px";
+      nav.style.bottom = "175px";
+      nav.style.visibility = "hidden";
       navBar.style.height = "20px";
       this.setState({ collapsed: true });
     } else {
       nav.style.bottom = "0px";
-      navBar.style.height = "120px";
+      nav.style.visibility = "visible";
+      navBar.style.height = "140px";
       this.setState({ collapsed: false });
     }
   }
@@ -47,13 +48,14 @@ export default class Nav extends Component {
   }
 
   checkWidth() {
-    if (window.innerWidth < 700) {
+    if (window.innerWidth < 771) {
       this.setState({ showNavBtn: true });
     } else {
       this.setState({ showNavBtn: false });
       this.setState({ collapsed: true });
       document.querySelector(".nav-bar").style.height = "20px";
-      document.querySelector(".nav-cont").style.bottom = "150px";
+      document.querySelector(".nav-cont").style.bottom = "175px";
+      document.querySelector(".nav-cont").style.visibility = "visible";
       window.addEventListener("scroll", this.collapseNav);
     }
   }
@@ -64,18 +66,20 @@ export default class Nav extends Component {
 
   render() {
     let buttonImg = null;
-    buttonImg = this.state.collapsed
-      ? <img src="../../resources/menu.png" />
-      : <img src="../../resources/cancel.png" />;
+    buttonImg = this.state.collapsed ? (
+      <img src="../../resources/menu.png" />
+    ) : (
+      <img src="../../resources/cancel.png" />
+    );
 
     return (
       <nav className="nav-bar">
-        {this.state.showNavBtn
-          ? <button className="menu-btn" onClick={() => this.toggleNav()}>
-              {buttonImg}
-            </button>
-          : null}
-        <div className="nav-cont" style={{ bottom: "150px" }}>
+        {this.state.showNavBtn ? (
+          <button className="menu-btn" onClick={() => this.toggleNav()}>
+            {buttonImg}
+          </button>
+        ) : null}
+        <div className="nav-cont" style={{ bottom: "175px", visibility: "hidden" }}>
           <ul>
             <li>
               <a className="nav" href="#books">
@@ -100,6 +104,15 @@ export default class Nav extends Component {
             <li>
               <a className="nav" href="#subscribe">
                 . &nbsp;&nbsp; SUBSCRIBE &nbsp;&nbsp; .
+              </a>
+            </li>
+            <li>
+              <a
+                className="nav"
+                href="https://medium.com/buddhababiesbooks"
+                target="_blank"
+              >
+                . &nbsp;&nbsp; BLOG &nbsp;&nbsp; .
               </a>
             </li>
           </ul>

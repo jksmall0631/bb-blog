@@ -26997,6 +26997,33 @@
 	              "Jeremy Duran is a professional graphic designer and artist. When he isn't doing artsy fartsy things (which is rare) he can be found causing mayhem in the city or being your local barista."
 	            )
 	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "about-card" },
+	          _react2.default.createElement("img", {
+	            src: "../../resources/BB-Sonya-headshot.png",
+	            className: "about-img"
+	          }),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "about-txt" },
+	            _react2.default.createElement(
+	              "h2",
+	              null,
+	              "Sonya Pevzner"
+	            ),
+	            _react2.default.createElement(
+	              "h3",
+	              null,
+	              "Videographer"
+	            ),
+	            _react2.default.createElement(
+	              "p",
+	              null,
+	              "Sonya is an wildlife scientist-farmer-waitress turned freelance storyteller. She is a writer, photographer, and videographer, focused on community and equal access. Most of her work revolves around community and the intersection of the outdoors world and diversity and equal access. You can find her in front of the fireplace, exploring the trails above Boulder, or driving her '09 Civic across the country. Her website is www.pevzdispenser.com, which is as good as it sounds"
+	            )
+	          )
 	        )
 	      );
 	    }

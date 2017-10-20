@@ -72,6 +72,26 @@ export default class About extends Component {
             </p>
           </div>
         </div>
+        <div className="about-card">
+          <img
+            src="../../resources/BB-Sonya-headshot.png"
+            className="about-img"
+          />
+          <div className="about-txt">
+            <h2>Sonya Pevzner</h2>
+            <h3>Videographer</h3>
+            <p>
+              Sonya is an wildlife scientist-farmer-waitress turned freelance
+              storyteller. She is a writer, photographer, and videographer,
+              focused on community and equal access. Most of her work revolves
+              around community and the intersection of the outdoors world and
+              diversity and equal access. You can find her in front of the
+              fireplace, exploring the trails above Boulder, or driving her '09
+              Civic across the country. Her website is www.pevzdispenser.com,
+              which is as good as it sounds
+            </p>
+          </div>
+        </div>
       </div>
     );
   }

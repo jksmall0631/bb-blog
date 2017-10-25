@@ -109,7 +109,7 @@ export default class Nav extends Component {
             <li>
               <a
                 className="nav"
-                href="https://medium.com/buddhababiesbooks"
+                href="https://blog.buddhababiesbooks.com"
                 target="_blank"
               >
                 . &nbsp;&nbsp; BLOG &nbsp;&nbsp; .

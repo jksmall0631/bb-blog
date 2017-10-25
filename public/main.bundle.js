@@ -26117,7 +26117,7 @@
 	                "a",
 	                {
 	                  className: "nav",
-	                  href: "https://medium.com/buddhababiesbooks",
+	                  href: "https://blog.buddhababiesbooks.com",
 	                  target: "_blank"
 	                },
 	                ". \xA0\xA0 BLOG \xA0\xA0 ."

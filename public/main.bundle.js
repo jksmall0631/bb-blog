@@ -27125,7 +27125,7 @@
 	        _react2.default.createElement(
 	          "div",
 	          { className: "about-card" },
-	          _react2.default.createElement("img", { className: "book-img", src: "../../resources/cover.png" }),
+	          _react2.default.createElement("img", { className: "book-img", src: "../../resources/cover-compress.jpg" }),
 	          _react2.default.createElement(
 	            "div",
 	            { className: "about-text" },

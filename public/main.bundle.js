@@ -27190,7 +27190,7 @@
 
 
 	// module
-	exports.push([module.id, ".book-cont {\n  margin: auto;\n  background-color: #aec9ab;\n  width: 90%;\n  border-radius: 15px;\n  margin-bottom: 85px;\n}\n\n.book-img {\n  max-width: 325px;\n  align-self: flex-start;\n  padding-right: 30px;\n}\n\n.book-title {\n  max-width: 800px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 30px;\n  color: white;\n}\n\n.book-desc {\n  max-width: 800px;\n  font-weight: 400;\n  line-height: 20px;\n  color: white;\n}\n\n@media (max-width: 825px) {\n  .book-img {\n    padding: 0;\n  }\n}\n\n@media (max-width: 500px) {\n  .book-img {\n    max-width: 250px;\n  }\n\n  .book-title {\n    margin-top: 40px;\n  }\n}\n", ""]);
+	exports.push([module.id, ".book-cont {\n  margin: auto;\n  background-color: #aec9ab;\n  width: 95%;\n  border-radius: 15px;\n  margin-bottom: 85px;\n}\n\n.book-img {\n  max-width: 325px;\n  align-self: flex-start;\n  padding-right: 30px;\n}\n\n.book-title {\n  max-width: 800px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 30px;\n  color: white;\n}\n\n.book-desc {\n  max-width: 800px;\n  font-weight: 400;\n  line-height: 20px;\n  color: white;\n}\n\n@media (max-width: 825px) {\n  .book-img {\n    padding: 0;\n  }\n}\n\n@media (max-width: 500px) {\n  .book-img {\n    max-width: 250px;\n  }\n\n  .book-title {\n    margin-top: 40px;\n  }\n}\n", ""]);
 
 	// exports
 

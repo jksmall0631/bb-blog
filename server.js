@@ -5,7 +5,6 @@ const path = require("path");
 const app = express();
 const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
-
 const environment = process.env.NODE_ENV || "development";
 const configuration = require("./knexfile")[environment];
 const database = require("knex")(configuration);

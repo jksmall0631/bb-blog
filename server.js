@@ -100,6 +100,7 @@ app.get("*", (req, res) => {
 });
 
 app.get('*.js', function (req, res, next) {
+  console.log("bla");
   req.url = req.url + '.gz';
   res.set('Content-Encoding', 'gzip');
   next();

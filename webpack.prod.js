@@ -6,6 +6,9 @@ var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = merge(common, {
   plugins: [
+    new webpack.DefinePlugin({
+             'process.env.NODE_ENV': '"production"'
+    }),
     new UglifyJSPlugin(),
     new CompressionPlugin({
       asset: "[path].gz[query]",
